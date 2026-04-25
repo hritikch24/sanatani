@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#FF6B00"/>
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <defs>
+    <radialGradient id="g" cx="40%" cy="30%">
+      <stop offset="0%" stop-color="#ff9040"/>
+      <stop offset="100%" stop-color="#800020"/>
+    </radialGradient>
+  </defs>
+  <text x="256" y="360" font-family="serif" font-size="320" text-anchor="middle"
+        fill="rgba(255,255,255,0.95)" style="font-weight:400">ॐ</text>
+  <rect x="80" y="430" width="352" height="2" rx="1" fill="rgba(218,165,32,0.6)"/>
+</svg>
