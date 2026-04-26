@@ -134,6 +134,8 @@ export default function Home() {
 
       {/* HERO */}
       <section className="hero">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/india.svg" alt="" className="india-map" aria-hidden="true" />
         <svg className="mandala-bg" viewBox="0 0 400 400" fill="none">
           <circle cx="200" cy="200" r="190" stroke="#DAA520" strokeWidth="0.5"/>
           <circle cx="200" cy="200" r="160" stroke="#DAA520" strokeWidth="0.5"/>
