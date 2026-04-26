@@ -11,22 +11,22 @@ const SH: Shloka[] = [
   {s:"उद्धरेदात्मनात्मानं नात्मानमवसादयेत्।\nआत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः॥",m:"स्वयं अपना उद्धार करो, खुद को नीचे मत गिरने दो। मनुष्य स्वयं अपना मित्र भी है और अपना शत्रु भी।",src:"भगवद् गीता 6.5"},
   {s:"श्रद्धावान् लभते ज्ञानं तत्परः संयतेन्द्रियः।\nज्ञानं लब्ध्वा परां शान्तिमचिरेणाधिगच्छति॥",m:"श्रद्धावान, तत्पर और जितेन्द्रिय मनुष्य ज्ञान प्राप्त करता है और शीघ्र ही परम शान्ति को प्राप्त होता है।",src:"भगवद् गीता 4.39"},
   {s:"सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज।\nअहं त्वां सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः॥",m:"सब धर्मों को छोड़कर केवल मेरी शरण में आओ। मैं तुम्हें सब पापों से मुक्त कर दूँगा।",src:"भगवद् गीता 18.66"},
-  {s:"वासांसि जीर्णानि यथा विहाय\nनवानि गृह्णाति नरोऽपराणि।\nतथा शरीराणि विहाय जीर्णानि\nअन्यानि संयाति नवानि देही॥",m:"जैसे मनुष्य पुराने वस्त्र त्यागकर नए वस्त्र धारण करता है, वैसे ही आत्मा पुराने शरीर को छोड़कर नया शरीर धारण करती है।",src:"भगवद् गीता 2.22"},
-  {s:"नैनं छिन्दन्ति शस्त्राणि नैनं दहति पावकः।\nन चैनं क्लेदयन्त्यापो न शोषयति मारुतः॥",m:"इस आत्मा को शस्त्र नहीं काट सकते, अग्नि नहीं जला सकती, जल नहीं गला सकता और वायु नहीं सुखा सकती।",src:"भगवद् गीता 2.23"},
-  {s:"यदा यदा हि धर्मस्य ग्लानिर्भवति भारत।\nअभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्॥",m:"हे भारत! जब-जब धर्म की हानि और अधर्म की वृद्धि होती है, तब-तब मैं अपने आप को प्रकट करता हूं।",src:"भगवद् गीता 4.7"},
-  {s:"अनन्याश्चिन्तयन्तो मां ये जनाः पर्युपासते।\nतेषां नित्याभियुक्तानां योगक्षेमं वहाम्यहम्॥",m:"जो भक्त अनन्य भाव से मेरा चिंतन करते हुए उपासना करते हैं, उनका योगक्षेम मैं स्वयं वहन करता हूं।",src:"भगवद् गीता 9.22"},
-  {s:"मन एव मनुष्याणां कारणं बन्धमोक्षयोः।\nबन्धाय विषयासक्तं मुक्त्यै निर्विषयं स्मृतम्॥",m:"मन ही मनुष्य के बंधन और मोक्ष का कारण है। विषयों में आसक्त मन बंधन देता है और विषयरहित मन मोक्ष देता है।",src:"अमृतबिन्दु उपनिषद्"},
-  {s:"सत्यमेव जयते नानृतम्\nसत्येन पन्था विततो देवयानः।",m:"सत्य की ही विजय होती है, असत्य की नहीं। सत्य के मार्ग से ही देवलोक तक पहुंचा जा सकता है।",src:"मुण्डक उपनिषद् 3.1.6"},
+  {s:"वासांसि जीर्णानि यथा विहाय\nनवानि गृह्णाति नरोऽपराणि।\nतथा शरीराणि विहाय जीर्णानि\nअन्यानि संयाति नवानि देही॥",m:"जैसे मनुष्य पुराने वस्त्र त्यागकर नए धारण करता है, वैसे ही आत्मा नया शरीर धारण करती है।",src:"भगवद् गीता 2.22"},
+  {s:"नैनं छिन्दन्ति शस्त्राणि नैनं दहति पावकः।\nन चैनं क्लेदयन्त्यापो न शोषयति मारुतः॥",m:"आत्मा को शस्त्र नहीं काट सकते, अग्नि नहीं जला सकती, जल नहीं गला सकता, वायु नहीं सुखा सकती।",src:"भगवद् गीता 2.23"},
+  {s:"यदा यदा हि धर्मस्य ग्लानिर्भवति भारत।\nअभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्॥",m:"जब-जब धर्म की हानि और अधर्म की वृद्धि होती है, तब-तब मैं अवतार लेता हूं।",src:"भगवद् गीता 4.7"},
+  {s:"अनन्याश्चिन्तयन्तो मां ये जनाः पर्युपासते।\nतेषां नित्याभियुक्तानां योगक्षेमं वहाम्यहम्॥",m:"जो भक्त अनन्य भाव से मेरी उपासना करते हैं, उनका योगक्षेम मैं स्वयं वहन करता हूं।",src:"भगवद् गीता 9.22"},
+  {s:"मन एव मनुष्याणां कारणं बन्धमोक्षयोः।\nबन्धाय विषयासक्तं मुक्त्यै निर्विषयं स्मृतम्॥",m:"मन ही बंधन और मोक्ष का कारण है। विषयासक्त मन बांधता है, विषयरहित मन मुक्त करता है।",src:"अमृतबिन्दु उपनिषद्"},
+  {s:"सत्यमेव जयते नानृतम्\nसत्येन पन्था विततो देवयानः।",m:"सत्य की ही विजय होती है, असत्य की नहीं। सत्य से ही देवलोक का मार्ग प्रशस्त है।",src:"मुण्डक उपनिषद् 3.1.6"},
   {s:"अहिंसा परमो धर्मः\nधर्म हिंसा तथैव च।",m:"अहिंसा सबसे बड़ा धर्म है। किसी भी जीव को कष्ट न देना ही सबसे बड़ा धर्म है।",src:"महाभारत — आदिपर्व"},
-  {s:"विद्या ददाति विनयं विनयाद् याति पात्रताम्।\nपात्रत्वाद् धनमाप्नोति धनाद् धर्मं ततः सुखम्॥",m:"विद्या विनय देती है, विनय से योग्यता आती है, योग्यता से धन, धन से धर्म और धर्म से सुख की प्राप्ति होती है।",src:"हितोपदेश"},
-  {s:"आत्मा वा अरे द्रष्टव्यः श्रोतव्यो मन्तव्यो निदिध्यासितव्यः।",m:"हे प्रिय! आत्मा को देखना, सुनना, मनन करना और ध्यान करना चाहिए।",src:"बृहदारण्यक उपनिषद् 2.4.5"},
-  {s:"सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः।\nसर्वे भद्राणि पश्यन्तु मा कश्चिद् दुःखभाग् भवेत्॥",m:"सभी सुखी हों, सभी रोग-रहित हों, सभी का कल्याण हो, कोई भी दुख का भागी न हो।",src:"शान्ति मन्त्र"},
-  {s:"ॐ सह नाववतु सह नौ भुनक्तु\nसह वीर्यं करवावहै।\nतेजस्विनावधीतमस्तु मा विद्विषावहै॥",m:"हम दोनों की एक साथ रक्षा हो, एक साथ भोजन करें, एक साथ शक्ति अर्जित करें। हमारी विद्या तेजस्वी हो।",src:"तैत्तिरीय उपनिषद् 2.2.2"},
-  {s:"तमसो मा ज्योतिर्गमय\nमृत्योर्मामृतं गमय।",m:"मुझे अंधकार से प्रकाश की ओर ले जाओ, मृत्यु से अमरत्व की ओर ले जाओ।",src:"बृहदारण्यक उपनिषद् 1.3.28"},
-  {s:"ईशावास्यमिदं सर्वं यत्किञ्च जगत्यां जगत्।\nतेन त्यक्तेन भुञ्जीथा मा गृधः कस्यस्विद् धनम्॥",m:"इस जगत में जो कुछ भी है, वह सब ईश्वर से आच्छादित है। त्याग-भाव से उपभोग करो।",src:"ईशोपनिषद् 1"},
-  {s:"असतो मा सद्गमय\nतमसो मा ज्योतिर्गमय\nमृत्योर्मामृतं गमय।",m:"असत्य से सत्य की ओर, अंधकार से प्रकाश की ओर, मृत्यु से अमरत्व की ओर ले चलो।",src:"बृहदारण्यक उपनिषद् 1.3.28"},
-  {s:"पूर्णमदः पूर्णमिदं पूर्णात् पूर्णमुदच्यते।\nपूर्णस्य पूर्णमादाय पूर्णमेवावशिष्यते॥",m:"वह पूर्ण है, यह भी पूर्ण है। पूर्ण से पूर्ण की उत्पत्ति होती है। पूर्ण में से पूर्ण निकालने पर भी पूर्ण ही शेष रहता है।",src:"ईशोपनिषद् — शान्ति पाठ"},
-  {s:"गुरुर्ब्रह्मा गुरुर्विष्णुः गुरुर्देवो महेश्वरः।\nगुरुः साक्षात् परं ब्रह्म तस्मै श्रीगुरवे नमः॥",m:"गुरु ही ब्रह्मा हैं, गुरु ही विष्णु हैं, गुरु ही महेश्वर हैं। गुरु साक्षात् परब्रह्म हैं — उन श्री गुरु को नमस्कार है।",src:"गुरु स्तोत्र"},
+  {s:"विद्या ददाति विनयं विनयाद् याति पात्रताम्।\nपात्रत्वाद् धनमाप्नोति धनाद् धर्मं ततः सुखम्॥",m:"विद्या विनय देती है, विनय से पात्रता, पात्रता से धन, धन से धर्म और धर्म से सुख मिलता है।",src:"हितोपदेश"},
+  {s:"आत्मा वा अरे द्रष्टव्यः श्रोतव्यो मन्तव्यो निदिध्यासितव्यः।",m:"आत्मा को देखना, सुनना, मनन करना और ध्यान करना चाहिए।",src:"बृहदारण्यक उपनिषद् 2.4.5"},
+  {s:"सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः।\nसर्वे भद्राणि पश्यन्तु मा कश्चिद् दुःखभाग् भवेत्॥",m:"सभी सुखी हों, सभी रोग-रहित हों, सभी का कल्याण हो, कोई दुःखी न हो।",src:"शान्ति मन्त्र"},
+  {s:"ॐ सह नाववतु सह नौ भुनक्तु\nसह वीर्यं करवावहै।\nतेजस्विनावधीतमस्तु मा विद्विषावहै॥",m:"गुरु-शिष्य की एक साथ रक्षा हो, एक साथ शक्ति अर्जित हो। विद्या तेजस्वी हो।",src:"तैत्तिरीय उपनिषद् 2.2.2"},
+  {s:"तमसो मा ज्योतिर्गमय\nमृत्योर्मामृतं गमय।",m:"अंधकार से प्रकाश की ओर, मृत्यु से अमरत्व की ओर ले जाओ।",src:"बृहदारण्यक उपनिषद् 1.3.28"},
+  {s:"ईशावास्यमिदं सर्वं यत्किञ्च जगत्यां जगत्।\nतेन त्यक्तेन भुञ्जीथा मा गृधः कस्यस्विद् धनम्॥",m:"जगत में सब कुछ ईश्वर से व्याप्त है। त्याग-भाव से उपभोग करो।",src:"ईशोपनिषद् 1"},
+  {s:"असतो मा सद्गमय\nतमसो मा ज्योतिर्गमय\nमृत्योर्मामृतं गमय।",m:"असत्य से सत्य, अंधकार से प्रकाश, मृत्यु से अमरत्व की ओर ले चलो।",src:"बृहदारण्यक उपनिषद् 1.3.28"},
+  {s:"पूर्णमदः पूर्णमिदं पूर्णात् पूर्णमुदच्यते।\nपूर्णस्य पूर्णमादाय पूर्णमेवावशिष्यते॥",m:"वह पूर्ण है, यह पूर्ण है। पूर्ण से पूर्ण निकालने पर भी पूर्ण ही शेष रहता है।",src:"ईशोपनिषद् — शान्ति पाठ"},
+  {s:"गुरुर्ब्रह्मा गुरुर्विष्णुः गुरुर्देवो महेश्वरः।\nगुरुः साक्षात् परं ब्रह्म तस्मै श्रीगुरवे नमः॥",m:"गुरु ही ब्रह्मा, विष्णु, महेश्वर हैं। गुरु साक्षात् परब्रह्म हैं — नमस्कार है।",src:"गुरु स्तोत्र"},
 ];
 
 const TOP_STATES = ['Delhi','Uttar Pradesh','Haryana','Uttarakhand'];
@@ -35,11 +35,15 @@ const OTHER_STATES = ['Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chha
 function Ornament() {
   return <div className="ornament"><div className="ln"/><div className="dt"/><div className="dm"/><div className="dt"/><div className="ln"/></div>;
 }
-function SecOrn({ sym = '✦', light = false }: { sym?: string; light?: boolean }) {
+function SecOrn({ sym = '✦' }: { sym?: string }) {
+  return <div className="sec-orn"><div className="bar"/><div className="sym">{sym}</div><div className="bar r"/></div>;
+}
+
+function IndiaMap() {
   return (
-    <div className="sec-orn">
-      <div className={`bar${light ? '' : ''}`}/><div className="sym">{sym}</div><div className="bar r"/>
-    </div>
+    <svg className="india-map" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
+      <path d="M200 30 L220 25 L235 35 L250 28 L270 32 L285 25 L300 30 L310 40 L320 38 L335 45 L340 55 L350 50 L365 55 L370 65 L380 60 L390 70 L385 80 L395 90 L400 105 L395 115 L405 125 L400 140 L410 150 L405 165 L395 170 L400 185 L390 195 L395 210 L385 220 L390 235 L380 245 L375 260 L365 270 L370 285 L360 295 L355 310 L345 320 L340 335 L330 345 L325 360 L315 370 L305 380 L295 390 L285 395 L275 405 L265 415 L258 430 L250 445 L245 460 L240 475 L235 490 L228 500 L220 510 L210 520 L200 525 L195 540 L188 550 L180 555 L175 545 L165 540 L155 530 L148 520 L140 515 L135 505 L130 490 L125 475 L118 465 L110 460 L105 448 L100 435 L95 420 L98 405 L105 395 L100 380 L108 370 L105 355 L110 340 L105 325 L112 310 L115 295 L120 280 L115 265 L120 250 L125 235 L118 220 L125 205 L120 190 L128 175 L130 160 L135 145 L140 130 L148 120 L155 110 L160 95 L168 85 L175 75 L180 60 L188 50 L195 40Z" />
+    </svg>
   );
 }
 
@@ -119,13 +123,11 @@ export default function Home() {
 
   function shareCard() {
     if (!member) return;
-    const t = `🙏 जय सनातन!\n\nमैंने सनातन परिवार में अपना नाम दर्ज किया।\nमेरा सदस्य नंबर: *${member.id}*\n\n🕉️ आप भी जुड़ें: sanatanparivar.in`;
-    window.open('https://wa.me/?text=' + encodeURIComponent(t), '_blank');
+    window.open('https://wa.me/?text=' + encodeURIComponent(`🙏 जय सनातन!\n\nमैंने सनातन परिवार में अपना नाम दर्ज किया।\nमेरा सदस्य नंबर: *${member.id}*\n\n🕉️ आप भी जुड़ें: sanatanparivar.in`), '_blank');
   }
 
   function shareShloka() {
-    const t = `🙏 *आज का दिव्य श्लोक*\n\n${sh.s}\n\n📖 ${sh.m}\n\n— ${sh.src}\n\n🕉️ सनातन परिवार से जुड़ें: sanatanparivar.in`;
-    window.open('https://wa.me/?text=' + encodeURIComponent(t), '_blank');
+    window.open('https://wa.me/?text=' + encodeURIComponent(`🙏 *आज का दिव्य श्लोक*\n\n${sh.s}\n\n📖 ${sh.m}\n\n— ${sh.src}\n\n🕉️ सनातन परिवार से जुड़ें: sanatanparivar.in`), '_blank');
   }
 
   const canSubmit = name.trim().length >= 2 && consent && !loading;
@@ -137,26 +139,19 @@ export default function Home() {
       {/* SACRED STRIP */}
       <div className="sacred-strip">ॐ नमः शिवाय &nbsp;✦&nbsp; जय श्री राम &nbsp;✦&nbsp; हर हर महादेव</div>
 
-      {/* HERO */}
+      {/* HERO with India Map */}
       <section className="hero">
-        {/* Mandala SVG */}
+        <IndiaMap />
         <svg className="mandala-bg" viewBox="0 0 400 400" fill="none">
           <circle cx="200" cy="200" r="190" stroke="#DAA520" strokeWidth="0.5"/>
           <circle cx="200" cy="200" r="160" stroke="#DAA520" strokeWidth="0.5"/>
           <circle cx="200" cy="200" r="130" stroke="#DAA520" strokeWidth="0.5"/>
           <circle cx="200" cy="200" r="100" stroke="#DAA520" strokeWidth="0.5"/>
-          <circle cx="200" cy="200" r="70" stroke="#DAA520" strokeWidth="0.5"/>
           <g transform="translate(200,200)">
             <ellipse rx="25" ry="70" stroke="#DAA520" strokeWidth="0.5"/>
             <ellipse rx="25" ry="70" stroke="#DAA520" strokeWidth="0.5" transform="rotate(45)"/>
             <ellipse rx="25" ry="70" stroke="#DAA520" strokeWidth="0.5" transform="rotate(90)"/>
             <ellipse rx="25" ry="70" stroke="#DAA520" strokeWidth="0.5" transform="rotate(135)"/>
-          </g>
-          <g stroke="#DAA520" strokeWidth="0.4">
-            <line x1="200" y1="10" x2="200" y2="390"/>
-            <line x1="10" y1="200" x2="390" y2="200"/>
-            <line x1="66" y1="66" x2="334" y2="334"/>
-            <line x1="334" y1="66" x2="66" y2="334"/>
           </g>
         </svg>
         <div className="om-glow">ॐ</div>
@@ -173,20 +168,24 @@ export default function Home() {
           <div className="live-dot" />
           <span><strong>{count}</strong>+ सनातनी जुड़ चुके हैं</span>
         </div>
-
         <div className="scroll-hint">
           <span>और देखें</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#DAA520" strokeWidth="1.5"><polyline points="6 9 12 15 18 9"/></svg>
         </div>
       </section>
 
+      {/* STATS STRIP */}
+      <div className="stats-strip">
+        <div className="stat-item"><div className="stat-num">{count}+</div><div className="stat-label">सनातनी सदस्य</div></div>
+        <div className="stat-item"><div className="stat-num">21</div><div className="stat-label">दैनिक श्लोक</div></div>
+        <div className="stat-item"><div className="stat-num">36</div><div className="stat-label">राज्य एवं केंद्र</div></div>
+      </div>
+
       {/* SHLOKA */}
       <section className="shloka-sec">
         <div className="shloka-bg-om">ॐ</div>
         <div className="shloka-label">आज का दिव्य श्लोक</div>
-        <div className="shloka-day">
-          {new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long' })}
-        </div>
+        <div className="shloka-day">{new Date().toLocaleDateString('en-IN', { weekday: 'long', day: 'numeric', month: 'long' })}</div>
         <SecOrn sym="✦" />
         <div className="sh-text">{sh.s}</div>
         <div className="sh-meaning">{sh.m}</div>
@@ -195,16 +194,52 @@ export default function Home() {
         <button className="btn-wa-shloka" onClick={shareShloka}><WaIcon size={16} /> WhatsApp पर भेजें</button>
       </section>
 
+      {/* VISION & MISSION */}
+      <section className="vision-sec" id="vision">
+        <SecOrn sym="ॐ" />
+        <h2 className="vision-title">हमारी दृष्टि एवं लक्ष्य</h2>
+        <SecOrn sym="✦" />
+        <div className="vision-grid">
+          <article className="vision-card">
+            <h3>🔱 दृष्टि (Vision)</h3>
+            <p>प्रत्येक सनातनी को एक डिजिटल पहचान प्रदान करना — जो जाति, भाषा और क्षेत्र से परे हो। एक ऐसा मंच जहां हर हिंदू गर्व से कहे — &ldquo;मैं सनातनी हूं।&rdquo;</p>
+          </article>
+          <article className="vision-card">
+            <h3>🎯 लक्ष्य (Mission)</h3>
+            <p>सनातन धर्म के ज्ञान, श्लोकों और संस्कृति को डिजिटल माध्यम से हर घर तक पहुंचाना। एक करोड़ सनातनियों को एक परिवार में जोड़ना — &ldquo;वसुधैव कुटुम्बकम्।&rdquo;</p>
+          </article>
+          <article className="vision-card">
+            <h3>🙏 उद्देश्य (Purpose)</h3>
+            <p>धर्म की रक्षा, संस्कृति का संरक्षण, और आने वाली पीढ़ी को सनातन मूल्यों से जोड़ना। यह कोई संगठन नहीं, यह एक परिवार है — सनातन परिवार।</p>
+          </article>
+        </div>
+      </section>
+
+      {/* VALUES */}
+      <section className="values-sec">
+        <SecOrn sym="ॐ" />
+        <h2 className="values-title">सनातन के स्तम्भ</h2>
+        <SecOrn sym="✦" />
+        <div className="values-grid">
+          <div className="value-item"><span className="value-icon">🕉️</span><div className="value-name">धर्म</div><div className="value-desc">सत्य और न्याय का मार्ग</div></div>
+          <div className="value-item"><span className="value-icon">🙏</span><div className="value-name">सेवा</div><div className="value-desc">निःस्वार्थ सेवा ही पूजा</div></div>
+          <div className="value-item"><span className="value-icon">📖</span><div className="value-name">ज्ञान</div><div className="value-desc">वेद, उपनिषद् और गीता</div></div>
+          <div className="value-item"><span className="value-icon">🙌</span><div className="value-name">एकता</div><div className="value-desc">वसुधैव कुटुम्बकम्</div></div>
+          <div className="value-item"><span className="value-icon">🕊️</span><div className="value-name">अहिंसा</div><div className="value-desc">सभी प्राणियों में दया</div></div>
+          <div className="value-item"><span className="value-icon">🇮🇳</span><div className="value-name">राष्ट्र</div><div className="value-desc">भारत माता की सेवा</div></div>
+        </div>
+      </section>
+
       {/* WHY JOIN */}
       <section className="why-sec">
         <SecOrn sym="ॐ" />
         <h2 className="why-title">सनातन परिवार क्यों?</h2>
         <SecOrn sym="✦" />
         <div className="pillars">
-          <div className="pillar"><span className="pillar-icon">🕉️</span><div className="pillar-name">सनातनी पहचान</div></div>
-          <div className="pillar"><span className="pillar-icon">📿</span><div className="pillar-name">दैनिक श्लोक</div></div>
-          <div className="pillar"><span className="pillar-icon">🏠</span><div className="pillar-name">एक परिवार</div></div>
-          <div className="pillar"><span className="pillar-icon">🇮🇳</span><div className="pillar-name">भारत की शान</div></div>
+          <div className="pillar"><span className="pillar-icon">🪪</span><div className="pillar-name">निःशुल्क डिजिटल सनातनी पहचान पत्र</div></div>
+          <div className="pillar"><span className="pillar-icon">📿</span><div className="pillar-name">प्रतिदिन नया श्लोक और अर्थ</div></div>
+          <div className="pillar"><span className="pillar-icon">🤝</span><div className="pillar-name">लाखों सनातनियों का एक परिवार</div></div>
+          <div className="pillar"><span className="pillar-icon">📲</span><div className="pillar-name">WhatsApp से शेयर करें, परिवार बढ़ाएं</div></div>
         </div>
       </section>
 
@@ -217,7 +252,6 @@ export default function Home() {
             <div style={{ fontSize: '1.25rem', color: 'var(--mr)', fontWeight: 700, margin: '.2rem 0' }}>जय श्री राम!</div>
             <p>आपका सनातन परिवार में स्वागत है</p>
           </div>
-
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem' }}>
             <div className="card-border-wrap">
               <div className="id-card" id="idCard">
@@ -242,7 +276,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
           <div className="card-btns">
             <button className="card-btn dl" onClick={dlCard}>📥 &nbsp;Download</button>
             <button className="card-btn wa" onClick={shareCard}>📲 &nbsp;WhatsApp</button>
@@ -259,8 +292,7 @@ export default function Home() {
           <a href="mailto:contact@sanatanparivar.in">संपर्क</a>
         </div>
         <div className="footer-copy">
-          © सनातन परिवार 2026<br />
-          भारत में निर्मित 🇮🇳<br />
+          © सनातन परिवार 2026<br />भारत में निर्मित 🇮🇳<br />
           <span style={{ fontSize: '.7rem', opacity: .5 }}>जय हिन्द · वन्दे मातरम्</span>
         </div>
       </footer>
@@ -275,51 +307,36 @@ export default function Home() {
             <div className="modal-handle" />
             <button className="modal-close" onClick={closeM}>✕</button>
             <div className="modal-inner">
-              <div className="step-progress">
-                <div className="step-dot active" />
-                <div className="step-dot" />
-              </div>
+              <div className="step-progress"><div className="step-dot active" /><div className="step-dot" /></div>
               <div className="step">
                 <div className="step-icon">🪔</div>
                 <div className="step-title">सनातन परिवार से जुड़ें</div>
                 <div className="step-sub">अपनी जानकारी भरें और सनातनी पहचान पाएं</div>
                 <Ornament />
-
                 <div className="name-wrap" style={{ marginTop: '1.5rem' }}>
                   <span className="name-prefix">🙏</span>
                   <input className="spiritual-input" type="text" placeholder="अपना शुभ नाम लिखें…"
                     maxLength={60} value={name} onChange={e => { setName(e.target.value); setErr(''); }} autoComplete="name" />
                 </div>
-
                 <div className="field-row">
                   <div className="field-label">📧 Email (वैकल्पिक)</div>
                   <input className="email-input" type="email" placeholder="your@email.com"
                     maxLength={150} value={email} onChange={e => { setEmail(e.target.value); setErr(''); }} autoComplete="email" />
                 </div>
-
                 <div className="field-row">
                   <div className="field-label">📍 राज्य / State (वैकल्पिक)</div>
                   <select className="spiritual-select" value={state} onChange={e => setState(e.target.value)}>
                     <option value="">— Select State —</option>
-                    <optgroup label="─── Popular ───">
-                      {TOP_STATES.map(s => <option key={s} value={s}>{s}</option>)}
-                    </optgroup>
-                    <optgroup label="─── All States & UTs ───">
-                      {OTHER_STATES.map(s => <option key={s} value={s}>{s}</option>)}
-                    </optgroup>
+                    <optgroup label="─── Popular ───">{TOP_STATES.map(s => <option key={s} value={s}>{s}</option>)}</optgroup>
+                    <optgroup label="─── All States & UTs ───">{OTHER_STATES.map(s => <option key={s} value={s}>{s}</option>)}</optgroup>
                   </select>
                 </div>
-
                 <div className="consent-box">
                   <label className="consent-row">
                     <input type="checkbox" checked={consent} onChange={e => { setConsent(e.target.checked); setErr(''); }} />
-                    <span>
-                      मैं अपनी जानकारी सनातन परिवार को देने की सहमति देता/देती हूं। <strong>यह शासकीय दस्तावेज़ नहीं है।</strong>{' '}
-                      <a href="/privacy" target="_blank" rel="noreferrer">गोपनीयता नीति</a>
-                    </span>
+                    <span>मैं अपनी जानकारी सनातन परिवार को देने की सहमति देता/देती हूं। <strong>यह शासकीय दस्तावेज़ नहीं है।</strong>{' '}<a href="/privacy" target="_blank" rel="noreferrer">गोपनीयता नीति</a></span>
                   </label>
                 </div>
-
                 {err && <p className="err">{err}</p>}
                 <button className="btn-next" onClick={submit} disabled={!canSubmit}>
                   {loading ? <><span className="spin" /> प्रतीक्षा करें...</> : '🙏  पंजीकरण करें'}
