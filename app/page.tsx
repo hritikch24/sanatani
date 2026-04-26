@@ -39,13 +39,6 @@ function SecOrn({ sym = '✦' }: { sym?: string }) {
   return <div className="sec-orn"><div className="bar"/><div className="sym">{sym}</div><div className="bar r"/></div>;
 }
 
-function IndiaMap() {
-  return (
-    <svg className="india-map" viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg">
-      <path d="M200 30 L220 25 L235 35 L250 28 L270 32 L285 25 L300 30 L310 40 L320 38 L335 45 L340 55 L350 50 L365 55 L370 65 L380 60 L390 70 L385 80 L395 90 L400 105 L395 115 L405 125 L400 140 L410 150 L405 165 L395 170 L400 185 L390 195 L395 210 L385 220 L390 235 L380 245 L375 260 L365 270 L370 285 L360 295 L355 310 L345 320 L340 335 L330 345 L325 360 L315 370 L305 380 L295 390 L285 395 L275 405 L265 415 L258 430 L250 445 L245 460 L240 475 L235 490 L228 500 L220 510 L210 520 L200 525 L195 540 L188 550 L180 555 L175 545 L165 540 L155 530 L148 520 L140 515 L135 505 L130 490 L125 475 L118 465 L110 460 L105 448 L100 435 L95 420 L98 405 L105 395 L100 380 L108 370 L105 355 L110 340 L105 325 L112 310 L115 295 L120 280 L115 265 L120 250 L125 235 L118 220 L125 205 L120 190 L128 175 L130 160 L135 145 L140 130 L148 120 L155 110 L160 95 L168 85 L175 75 L180 60 L188 50 L195 40Z" />
-    </svg>
-  );
-}
 
 export default function Home() {
   const [count, setCount] = useState('...');
@@ -139,9 +132,8 @@ export default function Home() {
       {/* SACRED STRIP */}
       <div className="sacred-strip">ॐ नमः शिवाय &nbsp;✦&nbsp; जय श्री राम &nbsp;✦&nbsp; हर हर महादेव</div>
 
-      {/* HERO with India Map */}
+      {/* HERO */}
       <section className="hero">
-        <IndiaMap />
         <svg className="mandala-bg" viewBox="0 0 400 400" fill="none">
           <circle cx="200" cy="200" r="190" stroke="#DAA520" strokeWidth="0.5"/>
           <circle cx="200" cy="200" r="160" stroke="#DAA520" strokeWidth="0.5"/>
@@ -162,11 +154,16 @@ export default function Home() {
         <div className="hero-om">ॐ</div>
         <Ornament />
         <h1>सनातन परिवार में<br />आपका स्वागत है</h1>
-        <p className="hero-sub">अपना नाम दर्ज करें, सनातनी पहचान पाएं और इस दिव्य परिवार का हिस्सा बनें।</p>
+        <p className="hero-sub">अपना नाम दर्ज करें, निःशुल्क सनातनी पहचान पाएं और इस दिव्य परिवार का हिस्सा बनें।</p>
         <Ornament />
         <div className="counter-pill" style={{ marginTop: '1.5rem' }}>
           <div className="live-dot" />
           <span><strong>{count}</strong>+ सनातनी जुड़ चुके हैं</span>
+        </div>
+        <button className="hero-cta" onClick={openM}>🙏 अभी जुड़ें — निःशुल्क</button>
+        <div className="social-proof">
+          <div className="avatars"><span>र</span><span>स</span><span>प</span><span>अ</span></div>
+          अभी {count}+ सनातनी इस परिवार में हैं
         </div>
         <div className="scroll-hint">
           <span>और देखें</span>
@@ -192,6 +189,8 @@ export default function Home() {
         <div className="sh-src">— {sh.src}</div>
         <SecOrn sym="✦" />
         <button className="btn-wa-shloka" onClick={shareShloka}><WaIcon size={16} /> WhatsApp पर भेजें</button>
+        <br />
+        <button className="shloka-cta" onClick={openM}>🙏 सनातन परिवार से जुड़ें</button>
       </section>
 
       {/* VISION & MISSION */}
@@ -228,6 +227,12 @@ export default function Home() {
           <div className="value-item"><span className="value-icon">🕊️</span><div className="value-name">अहिंसा</div><div className="value-desc">सभी प्राणियों में दया</div></div>
           <div className="value-item"><span className="value-icon">🇮🇳</span><div className="value-name">राष्ट्र</div><div className="value-desc">भारत माता की सेवा</div></div>
         </div>
+      </section>
+
+      {/* TESTIMONIAL */}
+      <section className="testi-strip">
+        <div className="testi-quote">&ldquo;सनातन परिवार से जुड़कर मुझे गर्व हुआ कि मैं सनातनी हूं। हर दिन एक नया श्लोक पढ़ता हूं। यह पहचान मेरे लिए अनमोल है।&rdquo;</div>
+        <div className="testi-name">— राहुल शर्मा, दिल्ली</div>
       </section>
 
       {/* WHY JOIN */}
@@ -298,7 +303,10 @@ export default function Home() {
       </footer>
 
       {/* STICKY */}
-      <div className="sticky-cta"><button className="btn-main" onClick={openM}>🙏 &nbsp;अभी जुड़ें — निःशुल्क</button></div>
+      <div className="sticky-cta">
+        <button className="btn-main" onClick={openM}>🙏 &nbsp;अभी जुड़ें — सदा के लिए निःशुल्क</button>
+        <div className="sticky-sub">30 सेकंड में पंजीकरण · कोई शुल्क नहीं · तुरंत पहचान पत्र</div>
+      </div>
 
       {/* MODAL */}
       {modal && (
