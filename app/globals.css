@@ -31,14 +31,14 @@ body{font-family:var(--en);background:var(--cr);color:var(--text);min-height:100
   position:relative;overflow:hidden;min-height:100svh;
   display:flex;flex-direction:column;justify-content:center;align-items:center;
   padding:3rem 1.5rem 7rem;
-  background:linear-gradient(175deg,#fff8e8 0%,#ffe8a0 40%,#ffd060 100%);
+  background:#1a0a00;
   text-align:center;
 }
 .hero-img{
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-  pointer-events:none;opacity:.35;
+  pointer-events:none;
 }
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,248,220,.55) 0%,rgba(255,232,160,.6) 40%,rgba(255,208,96,.7) 100%);pointer-events:none}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.1) 40%,rgba(0,0,0,.35) 100%);pointer-events:none}
 .om-glow{
   position:absolute;top:50%;left:50%;transform:translate(-50%,-56%);
   font-family:var(--deva);font-size:clamp(12rem,55vw,22rem);color:var(--mr);
@@ -46,13 +46,13 @@ body{font-family:var(--en);background:var(--cr);color:var(--text);min-height:100
   animation:omPulse 4s ease-in-out infinite;
 }
 @keyframes omPulse{0%,100%{opacity:.03;transform:translate(-50%,-56%) scale(1)}50%{opacity:.06;transform:translate(-50%,-56%) scale(1.02)}}
-.diya{position:absolute;top:1.5rem;font-size:1.8rem;opacity:.4;animation:flicker 2s ease-in-out infinite}
+.diya{position:absolute;top:1.5rem;font-size:1.8rem;opacity:.6;animation:flicker 2s ease-in-out infinite}
 .diya-l{left:1.25rem;animation-delay:.3s}.diya-r{right:1.25rem}
 @keyframes flicker{0%,100%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.08) rotate(2deg)}}
-.hero-top-label{position:relative;z-index:1;font-family:var(--deva);font-size:.85rem;color:var(--mr);letter-spacing:.15em;margin-bottom:1rem;opacity:.75}
-.hero-om{position:relative;z-index:1;font-family:var(--deva);font-size:2.5rem;color:var(--mr);line-height:1;margin-bottom:.5rem}
-.hero h1{position:relative;z-index:1;font-family:var(--deva);font-size:clamp(1.7rem,6.5vw,2.8rem);color:var(--mr);line-height:1.5;font-weight:400;margin:.25rem 0 .75rem}
-.hero-sub{position:relative;z-index:1;font-family:var(--deva);font-size:clamp(1rem,3.5vw,1.25rem);color:var(--muted);line-height:1.7;margin-bottom:2rem;max-width:340px}
+.hero-top-label{position:relative;z-index:1;font-family:var(--deva);font-size:.85rem;color:var(--gl);letter-spacing:.15em;margin-bottom:1rem;opacity:.85}
+.hero-om{position:relative;z-index:1;font-family:var(--deva);font-size:2.5rem;color:var(--gl);line-height:1;margin-bottom:.5rem;text-shadow:0 2px 12px rgba(0,0,0,.4)}
+.hero h1{position:relative;z-index:1;font-family:var(--deva);font-size:clamp(1.7rem,6.5vw,2.8rem);color:#fff;line-height:1.5;font-weight:400;margin:.25rem 0 .75rem;text-shadow:0 2px 20px rgba(0,0,0,.5)}
+.hero-sub{position:relative;z-index:1;font-family:var(--deva);font-size:clamp(1rem,3.5vw,1.25rem);color:rgba(255,248,220,.85);line-height:1.7;margin-bottom:2rem;max-width:340px;text-shadow:0 1px 8px rgba(0,0,0,.3)}
 .counter-pill{
   position:relative;z-index:1;display:inline-flex;align-items:center;gap:.6rem;
   background:var(--mr);color:var(--cr);font-family:var(--deva);
@@ -68,7 +68,7 @@ body{font-family:var(--en);background:var(--cr);color:var(--text);min-height:100
   animation:bounceDown 2s ease-in-out infinite;
 }
 @keyframes bounceDown{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
-.scroll-hint span{font-size:.65rem;letter-spacing:.1em;color:var(--muted);font-family:var(--deva)}
+.scroll-hint span{font-size:.65rem;letter-spacing:.1em;color:var(--gl);font-family:var(--deva)}
 
 /* ── HERO CTA ── */
 .hero-cta{
@@ -88,7 +88,7 @@ body{font-family:var(--en);background:var(--cr);color:var(--text);min-height:100
 .social-proof{
   position:relative;z-index:1;margin-top:1.25rem;
   display:flex;align-items:center;gap:.5rem;
-  font-family:var(--deva);font-size:.78rem;color:var(--muted);opacity:.7;
+  font-family:var(--deva);font-size:.78rem;color:rgba(255,248,220,.7);
 }
 .avatars{display:flex;margin-right:.15rem}
 .avatars span{
