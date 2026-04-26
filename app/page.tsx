@@ -30,7 +30,8 @@ const SH: Shloka[] = [
   { s: "गुरुर्ब्रह्मा गुरुर्विष्णुः गुरुर्देवो महेश्वरः।\nगुरुः साक्षात् परं ब्रह्म तस्मै श्रीगुरवे नमः॥", m: "गुरु ही ब्रह्मा हैं, गुरु ही विष्णु हैं, गुरु ही देव महेश्वर हैं। गुरु साक्षात् परब्रह्म हैं — उन श्री गुरु को नमस्कार है।", src: "गुरु स्तोत्र" },
 ];
 
-const STATES = ['Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chhattisgarh','Goa','Gujarat','Haryana','Himachal Pradesh','Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland','Odisha','Punjab','Rajasthan','Sikkim','Tamil Nadu','Telangana','Tripura','Uttar Pradesh','Uttarakhand','West Bengal','Andaman & Nicobar Islands','Chandigarh','Delhi','Jammu & Kashmir','Ladakh','Lakshadweep','Puducherry','Other'];
+const TOP_STATES = ['Delhi', 'Uttar Pradesh', 'Haryana', 'Uttarakhand'];
+const OTHER_STATES = ['Andhra Pradesh','Arunachal Pradesh','Assam','Bihar','Chhattisgarh','Goa','Gujarat','Himachal Pradesh','Jharkhand','Karnataka','Kerala','Madhya Pradesh','Maharashtra','Manipur','Meghalaya','Mizoram','Nagaland','Odisha','Punjab','Rajasthan','Sikkim','Tamil Nadu','Telangana','Tripura','West Bengal','Andaman & Nicobar Islands','Chandigarh','Jammu & Kashmir','Ladakh','Lakshadweep','Puducherry','Other'];
 
 export default function Home() {
   const [count, setCount] = useState('...');
@@ -46,7 +47,6 @@ export default function Home() {
 
   const idx = Math.floor(Date.now() / 86400000) % 21;
   const sh = SH[idx];
-  const dc = (n: number) => `dot${step > n ? ' done' : step === n ? ' active' : ''}`;
 
   useEffect(() => {
     fetch('/api/count')
@@ -57,16 +57,15 @@ export default function Home() {
       navigator.serviceWorker.register('/sw.js').catch(() => {});
   }, []);
 
-  function openM() { setModal(true); }
+  function openM() { setModal(true); setStep(1); }
   function closeM() {
     setModal(false);
     setTimeout(() => { setStep(1); setName(''); setEmail(''); setState(''); setConsent(false); setErr(''); setMember(null); }, 300);
   }
-  function go2() {
-    if (name.trim().length < 2) { setErr('कृपया अपना नाम लिखें'); return; }
-    setErr(''); setStep(2);
-  }
+
   async function submit() {
+    if (name.trim().length < 2) { setErr('कृपया अपना शुभ नाम लिखें'); return; }
+    if (email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) { setErr('कृपया सही email दर्ज करें'); return; }
     if (!consent) { setErr('सहमति आवश्यक है'); return; }
     setLoading(true); setErr('');
     const dateStr = new Date().toLocaleDateString('en-IN', { day: '2-digit', month: 'short', year: 'numeric' });
@@ -83,29 +82,34 @@ export default function Home() {
     } catch {
       setMember({ name: name.trim(), id: 'SP-' + String(Math.floor(Math.random() * 90000) + 10000), date: dateStr });
     } finally {
-      setLoading(false); setStep(3);
+      setLoading(false); setStep(2);
     }
   }
+
   async function dlCard() {
     const h2c = (window as { html2canvas?: (el: HTMLElement, opts: object) => Promise<HTMLCanvasElement> }).html2canvas;
     if (!h2c || !member) return;
     const card = document.getElementById('idCard');
     if (!card) return;
-    const canvas = await h2c(card, { scale: 3, backgroundColor: '#fffbf4', useCORS: true });
+    const canvas = await h2c(card, { scale: 3, backgroundColor: null, useCORS: true, logging: false });
     const a = document.createElement('a');
     a.href = canvas.toDataURL('image/png');
     a.download = `SanatanParivar-${member.id}.png`;
     a.click();
   }
+
   function shareCard() {
     if (!member) return;
     const t = `🙏 मैंने सनातन परिवार में अपना नाम दर्ज किया।\n\nमेरा सदस्य नंबर: ${member.id}\nनाम: ${member.name}\n\nआप भी जुड़ें: https://sanatanparivar.in`;
     window.open('https://wa.me/?text=' + encodeURIComponent(t), '_blank');
   }
+
   function shareShloka() {
     const t = `🙏 *आज का श्लोक*\n\n${sh.s}\n\n📖 अर्थ: ${sh.m}\n\n— ${sh.src}\n\n🕉️ SanatanParivar.in`;
     window.open('https://wa.me/?text=' + encodeURIComponent(t), '_blank');
   }
+
+  const canSubmit = name.trim().length >= 2 && consent && !loading;
 
   return (
     <>
@@ -114,9 +118,10 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <div className="hero-glow" />
+        <div className="hero-particles"><span /><span /><span /><span /><span /><span /></div>
         <div className="badge">🕉️&nbsp;&nbsp;हिंदू समुदाय की डिजिटल पहचान</div>
         <h1>सनातन परिवार में<br />आपका स्वागत है</h1>
-        <p className="hero-sub">अपना नाम दर्ज करें, सनातनी पहचान पाएं<br />और इस महान परिवार का हिस्सा बनें</p>
+        <p className="hero-sub">अपना नाम दर्ज करें, सनातनी पहचान पाएं और इस महान परिवार का हिस्सा बनें</p>
         <div className="counter-pill"><strong>{count}</strong>+ सनातनी जुड़ चुके हैं</div>
         <button className="hero-cta" onClick={openM}>अभी जुड़ें 🙏</button>
       </section>
@@ -143,7 +148,7 @@ export default function Home() {
       <footer>
         <div className="flinks">
           <a href="/privacy">गोपनीयता नीति</a>
-          <a href="mailto:contact@sanatanparivar.in">संपर्क करें</a>
+          <a href="mailto:admin@sanatanparivar.in">संपर्क करें</a>
         </div>
         <div className="fcopy">© सनातन परिवार 2026 &nbsp;|&nbsp; SanatanParivar.in</div>
         <div className="fmade">भारत में निर्मित 🇮🇳</div>
@@ -158,70 +163,81 @@ export default function Home() {
           <div className="sheet">
             <div className="sheet-top">
               <div className="progress">
-                <div className={dc(1)} /><div className={dc(2)} /><div className={dc(3)} />
+                <div className={`dot${step > 1 ? ' done' : ' active'}`} />
+                <div className={`dot${step === 2 ? ' active' : ''}`} />
               </div>
               <button className="close-btn" onClick={closeM}>✕</button>
             </div>
 
+            {/* SINGLE-PAGE FORM */}
             {step === 1 && (
               <div className="step">
                 <div className="step-icon">🙏</div>
-                <div className="step-title">आज का आशीर्वाद प्राप्त करें</div>
-                <div className="step-sub">भगवान के दरबार में अपनी उपस्थिति दर्ज करें</div>
-                <input className="field" type="text" placeholder="अपना शुभ नाम लिखें" maxLength={60}
-                  value={name} onChange={e => { setName(e.target.value); setErr(''); }} autoComplete="name" />
-                {err && <p className="err">{err}</p>}
-                <button className="action-btn" onClick={go2} disabled={name.trim().length < 2}>आगे बढ़ें →</button>
-              </div>
-            )}
+                <div className="step-title">सनातन परिवार से जुड़ें</div>
+                <div className="step-sub">अपनी जानकारी भरें और सनातनी पहचान पाएं</div>
 
-            {step === 2 && (
-              <div className="step">
-                <div className="step-icon">🕉️</div>
-                <div className="step-title">अपने कुल की पहचान</div>
-                <div className="step-sub">यह जानकारी पूरी तरह वैकल्पिक है</div>
+                <label className="flbl">शुभ नाम <span className="req">*</span></label>
+                <input className="field" type="text" placeholder="अपना शुभ नाम लिखें"
+                  maxLength={60} value={name} onChange={e => { setName(e.target.value); setErr(''); }} autoComplete="name" />
+
                 <label className="flbl">Email <span className="opt-tag">OPTIONAL</span></label>
-                <input className="field" type="email" placeholder="your@email.com" maxLength={150}
-                  value={email} onChange={e => setEmail(e.target.value)}
-                  style={{ fontSize: '1rem', fontFamily: 'var(--en)' }} autoComplete="email" />
+                <input className="field field-en" type="email" placeholder="your@email.com"
+                  maxLength={150} value={email} onChange={e => { setEmail(e.target.value); setErr(''); }} autoComplete="email" />
+
                 <label className="flbl">राज्य / State <span className="opt-tag">OPTIONAL</span></label>
-                <select className="field" value={state} onChange={e => setState(e.target.value)}>
+                <select className="field field-en" value={state} onChange={e => setState(e.target.value)}>
                   <option value="">— Select State —</option>
-                  {STATES.map(s => <option key={s} value={s}>{s}</option>)}
+                  <optgroup label="─── Popular ───">
+                    {TOP_STATES.map(s => <option key={s} value={s}>{s}</option>)}
+                  </optgroup>
+                  <optgroup label="─── All States & UTs ───">
+                    {OTHER_STATES.map(s => <option key={s} value={s}>{s}</option>)}
+                  </optgroup>
                 </select>
+
                 <div className="consent-box">
                   <input type="checkbox" id="iConsent" checked={consent} onChange={e => { setConsent(e.target.checked); setErr(''); }} />
                   <label htmlFor="iConsent">
                     मैं अपनी जानकारी सनातन परिवार को देने की सहमति देता/देती हूं।{' '}
                     <strong>यह शासकीय दस्तावेज़ नहीं है।</strong>{' '}
-                    <a href="/privacy" target="_blank" rel="noreferrer">गोपनीयता नीति पढ़ें</a>
+                    <a href="/privacy" target="_blank" rel="noreferrer">गोपनीयता नीति</a>
                   </label>
                 </div>
+
                 {err && <p className="err">{err}</p>}
-                <button className="action-btn" onClick={submit} disabled={!consent || loading}>
+                <button className="action-btn" onClick={submit} disabled={!canSubmit}>
                   {loading ? <><span className="spin" />{' '}प्रतीक्षा करें...</> : 'पंजीकरण करें 🙏'}
                 </button>
               </div>
             )}
 
-            {step === 3 && member && (
+            {/* ID CARD RESULT */}
+            {step === 2 && member && (
               <div className="step">
                 <div className="celebration">
-                  <div style={{ fontSize: '1.8rem' }}>🎉</div>
-                  <div style={{ fontSize: '1.3rem', color: 'var(--sf)', fontWeight: 700, margin: '.3rem 0' }}>जय श्री राम!</div>
+                  <div style={{ fontSize: '1.6rem' }}>🎉</div>
+                  <div style={{ fontSize: '1.25rem', color: 'var(--sf)', fontWeight: 700, margin: '.2rem 0' }}>जय श्री राम!</div>
                   <p>आपका सनातन परिवार में स्वागत है</p>
                 </div>
-                <div className="id-card" id="idCard">
-                  <div className="id-hdr">🕉️ सनातन परिवार<br />सदस्य प्रमाण पत्र</div>
-                  <div className="id-om">ॐ</div>
-                  <div className="id-rule" />
-                  <div className="id-name">{member.name}</div>
-                  <div className="id-num">{member.id}</div>
-                  <div className="id-date">Registered: {member.date}</div>
-                  <div className="id-rule" />
-                  <div className="id-watermark">SanatanParivar.in</div>
-                  <div className="id-disc">यह एक सामुदायिक पहचान है, शासकीय दस्तावेज़ नहीं</div>
+
+                {/* html2canvas-safe card: no pseudo-elements, all real DOM */}
+                <div className="id-card-outer" id="idCard">
+                  <div className="id-card-inner">
+                    <div className="id-top-bar" />
+                    <div className="id-hdr">सनातन परिवार</div>
+                    <div className="id-hdr-sub">Member Certificate</div>
+                    <div className="id-om">ॐ</div>
+                    <div className="id-rule" />
+                    <div className="id-name">{member.name}</div>
+                    <div className="id-num">{member.id}</div>
+                    <div className="id-date">दिनांक: {member.date}</div>
+                    <div className="id-rule" />
+                    <div className="id-watermark">SanatanParivar.in</div>
+                    <div className="id-disc">यह एक सामुदायिक पहचान है, शासकीय दस्तावेज़ नहीं</div>
+                    <div className="id-om-bg">ॐ</div>
+                  </div>
                 </div>
+
                 <div className="card-btns">
                   <button className="btn-dl" onClick={dlCard}>📥 Download</button>
                   <button className="btn-wa" onClick={shareCard}>📲 WhatsApp</button>
