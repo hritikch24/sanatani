@@ -135,20 +135,8 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/india.svg" alt="" className="india-map" aria-hidden="true" />
-        <svg className="mandala-bg" viewBox="0 0 400 400" fill="none">
-          <circle cx="200" cy="200" r="190" stroke="#DAA520" strokeWidth="0.5"/>
-          <circle cx="200" cy="200" r="160" stroke="#DAA520" strokeWidth="0.5"/>
-          <circle cx="200" cy="200" r="130" stroke="#DAA520" strokeWidth="0.5"/>
-          <circle cx="200" cy="200" r="100" stroke="#DAA520" strokeWidth="0.5"/>
-          <g transform="translate(200,200)">
-            <ellipse rx="25" ry="70" stroke="#DAA520" strokeWidth="0.5"/>
-            <ellipse rx="25" ry="70" stroke="#DAA520" strokeWidth="0.5" transform="rotate(45)"/>
-            <ellipse rx="25" ry="70" stroke="#DAA520" strokeWidth="0.5" transform="rotate(90)"/>
-            <ellipse rx="25" ry="70" stroke="#DAA520" strokeWidth="0.5" transform="rotate(135)"/>
-          </g>
-        </svg>
-        <div className="om-glow">ॐ</div>
+        <img src="/hero-bg.png" alt="" className="hero-img" aria-hidden="true" />
+        <div className="hero-overlay" />
         <div className="diya diya-l">🪔</div>
         <div className="diya diya-r">🪔</div>
 
