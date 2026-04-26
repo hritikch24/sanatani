@@ -38,7 +38,7 @@ body{font-family:var(--en);background:var(--cr);color:var(--text);min-height:100
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   pointer-events:none;
 }
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.1) 40%,rgba(0,0,0,.35) 100%);pointer-events:none}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.52) 0%,rgba(0,0,0,.38) 35%,rgba(0,0,0,.32) 55%,rgba(0,0,0,.55) 100%);pointer-events:none}
 .om-glow{
   position:absolute;top:50%;left:50%;transform:translate(-50%,-56%);
   font-family:var(--deva);font-size:clamp(12rem,55vw,22rem);color:var(--mr);
@@ -51,8 +51,8 @@ body{font-family:var(--en);background:var(--cr);color:var(--text);min-height:100
 @keyframes flicker{0%,100%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.08) rotate(2deg)}}
 .hero-top-label{position:relative;z-index:1;font-family:var(--deva);font-size:.85rem;color:var(--gl);letter-spacing:.15em;margin-bottom:1rem;opacity:.85}
 .hero-om{position:relative;z-index:1;font-family:var(--deva);font-size:2.5rem;color:var(--gl);line-height:1;margin-bottom:.5rem;text-shadow:0 2px 12px rgba(0,0,0,.4)}
-.hero h1{position:relative;z-index:1;font-family:var(--deva);font-size:clamp(1.7rem,6.5vw,2.8rem);color:#fff;line-height:1.5;font-weight:400;margin:.25rem 0 .75rem;text-shadow:0 2px 20px rgba(0,0,0,.5)}
-.hero-sub{position:relative;z-index:1;font-family:var(--deva);font-size:clamp(1rem,3.5vw,1.25rem);color:rgba(255,248,220,.85);line-height:1.7;margin-bottom:2rem;max-width:340px;text-shadow:0 1px 8px rgba(0,0,0,.3)}
+.hero h1{position:relative;z-index:1;font-family:var(--deva);font-size:clamp(1.7rem,6.5vw,2.8rem);color:#fff;line-height:1.5;font-weight:400;margin:.25rem 0 .75rem;text-shadow:0 2px 8px rgba(0,0,0,.7),0 0 30px rgba(0,0,0,.4)}
+.hero-sub{position:relative;z-index:1;font-family:var(--deva);font-size:clamp(1rem,3.5vw,1.25rem);color:rgba(255,248,220,.95);line-height:1.7;margin-bottom:2rem;max-width:340px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
 .counter-pill{
   position:relative;z-index:1;display:inline-flex;align-items:center;gap:.6rem;
   background:var(--mr);color:var(--cr);font-family:var(--deva);
