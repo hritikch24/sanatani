@@ -60,7 +60,7 @@ export default function Home() {
   useEffect(() => {
     fetch('/api/count').then(r => r.json())
       .then(d => setCount(Number(d.count).toLocaleString('en-IN')))
-      .catch(() => setCount('1,247'));
+      .catch(() => setCount('1,507'));
     if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(() => {});
   }, []);
 
@@ -90,7 +90,7 @@ export default function Home() {
       const d = await r.json();
       if (!r.ok) throw new Error(d.error);
       setMember({ name: name.trim(), id: d.sp_id, date: dateStr });
-      setCount(p => ((parseInt(p.replace(/,/g, '')) || 1247) + 1).toLocaleString('en-IN'));
+      setCount(p => ((parseInt(p.replace(/,/g, '')) || 1507) + 1).toLocaleString('en-IN'));
     } catch {
       setMember({ name: name.trim(), id: 'SP-' + String(Math.floor(Math.random() * 90000) + 10000), date: dateStr });
     } finally {
