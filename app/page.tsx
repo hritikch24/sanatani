@@ -310,6 +310,7 @@ export default function Home() {
         <div className="footer-om">ॐ</div>
         <Ornament />
         <div className="footer-links">
+          <a href="/about">हमारे बारे में</a>
           <a href="/shloka">दैनिक श्लोक</a>
           <a href="/privacy">गोपनीयता नीति</a>
           <a href="mailto:contact@sanatanparivar.in">संपर्क</a>

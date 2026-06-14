@@ -48,6 +48,29 @@ const jsonLd = {
   contactPoint: { '@type': 'ContactPoint', email: 'contact@sanatanparivar.in', contactType: 'customer service', availableLanguage: ['Hindi', 'English'] },
 };
 
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'सनातन परिवार',
+  alternateName: ['Sanatan Parivar', 'SanatanParivar'],
+  url: 'https://sanatanparivar.in',
+  inLanguage: ['hi', 'en'],
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: 'https://sanatanparivar.in/shloka',
+    'query-input': 'required name=search_term_string',
+  },
+};
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'मुख्य पृष्ठ', item: 'https://sanatanparivar.in' },
+    { '@type': 'ListItem', position: 2, name: 'दैनिक श्लोक', item: 'https://sanatanparivar.in/shloka' },
+  ],
+};
+
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -69,9 +92,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/icon.svg" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-        {/* AdSense — replace ca-pub-XXXXXXX with your AdSense publisher ID */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossOrigin="anonymous" />
       </head>
       <body>{children}</body>
     </html>
