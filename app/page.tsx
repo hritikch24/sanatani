@@ -219,10 +219,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* TESTIMONIAL */}
+      {/* TESTIMONIALS */}
       <section className="testi-strip">
-        <div className="testi-quote">&ldquo;सनातन परिवार से जुड़कर मुझे गर्व हुआ कि मैं सनातनी हूं। हर दिन एक नया श्लोक पढ़ता हूं। यह पहचान मेरे लिए अनमोल है।&rdquo;</div>
-        <div className="testi-name">— राहुल शर्मा, दिल्ली</div>
+        <div className="testi-grid">
+          <div className="testi-card">
+            <div className="testi-quote">&ldquo;सनातन परिवार से जुड़कर मुझे गर्व हुआ कि मैं सनातनी हूं। हर दिन एक नया श्लोक पढ़ता हूं।&rdquo;</div>
+            <div className="testi-name">— राहुल शर्मा, दिल्ली</div>
+          </div>
+          <div className="testi-card">
+            <div className="testi-quote">&ldquo;30 सेकंड में पहचान पत्र मिल गया। अपने पूरे परिवार को भी जोड़ दिया। जय श्री राम!&rdquo;</div>
+            <div className="testi-name">— प्रिया त्रिपाठी, उत्तर प्रदेश</div>
+          </div>
+          <div className="testi-card">
+            <div className="testi-quote">&ldquo;रोज़ सुबह गीता का श्लोक पढ़ना अब मेरी दिनचर्या बन गई है। धन्यवाद सनातन परिवार!&rdquo;</div>
+            <div className="testi-name">— अमित पटेल, गुजरात</div>
+          </div>
+        </div>
       </section>
 
       {/* WHY JOIN */}
@@ -278,11 +290,27 @@ export default function Home() {
         </section>
       )}
 
+      {/* FAQ */}
+      <section className="faq-sec">
+        <SecOrn sym="ॐ" />
+        <h2 className="faq-title">अक्सर पूछे जाने वाले प्रश्न</h2>
+        <SecOrn sym="✦" />
+        <div className="faq-list">
+          <details className="faq-item"><summary>सनातन परिवार क्या है?</summary><p>सनातन परिवार भारत का सबसे बड़ा सनातनी डिजिटल समुदाय है। यहाँ आप निःशुल्क सदस्यता लेकर अपनी सनातनी पहचान पा सकते हैं, प्रतिदिन गीता के श्लोक पढ़ सकते हैं, और लाखों सनातनियों से जुड़ सकते हैं।</p></details>
+          <details className="faq-item"><summary>सनातन परिवार में कैसे जुड़ें?</summary><p>&ldquo;अभी जुड़ें&rdquo; बटन दबाएं, अपना नाम भरें और 30 सेकंड में निःशुल्क सदस्यता पाएं। आपको तुरंत डिजिटल पहचान पत्र मिलेगा जिसे आप डाउनलोड और शेयर कर सकते हैं।</p></details>
+          <details className="faq-item"><summary>क्या इसमें कोई शुल्क लगता है?</summary><p>नहीं। सनातन परिवार की सदस्यता पूर्णतः निःशुल्क है और सदा रहेगी। कोई छिपा शुल्क नहीं है।</p></details>
+          <details className="faq-item"><summary>पहचान पत्र क्या है? क्या यह सरकारी है?</summary><p>यह एक डिजिटल सामुदायिक पहचान पत्र है — शासकीय दस्तावेज़ नहीं। यह आपकी सनातनी पहचान को दर्शाता है जिसमें आपका नाम, सदस्य संख्या और तिथि होती है।</p></details>
+          <details className="faq-item"><summary>आज का श्लोक कहाँ पढ़ें?</summary><p>SanatanParivar.in पर प्रतिदिन भगवद् गीता, उपनिषद् और वेदों से एक दिव्य श्लोक अर्थ सहित प्रकाशित होता है। आप इसे WhatsApp पर भी शेयर कर सकते हैं।</p></details>
+          <details className="faq-item"><summary>क्या मेरी जानकारी सुरक्षित है?</summary><p>हाँ। हम केवल आपका नाम लेते हैं, email और राज्य वैकल्पिक हैं। आपकी जानकारी किसी तीसरे पक्ष के साथ साझा नहीं की जाती।</p></details>
+        </div>
+      </section>
+
       {/* FOOTER */}
       <footer>
         <div className="footer-om">ॐ</div>
         <Ornament />
         <div className="footer-links">
+          <a href="/shloka">दैनिक श्लोक</a>
           <a href="/privacy">गोपनीयता नीति</a>
           <a href="mailto:contact@sanatanparivar.in">संपर्क</a>
         </div>

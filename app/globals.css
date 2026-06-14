@@ -138,16 +138,39 @@ body{font-family:var(--en);background:var(--cr);color:var(--text);min-height:100
 }
 .shloka-cta:active{transform:translateY(1px)}
 
-/* ── TESTIMONIAL STRIP ── */
+/* ── TESTIMONIALS ── */
 .testi-strip{
-  padding:2rem 1.5rem;background:linear-gradient(135deg,#fff8e8,#fff0c0);
+  padding:2.5rem 1.5rem;background:linear-gradient(135deg,#fff8e8,#fff0c0);
   text-align:center;border-top:1px solid rgba(218,165,32,.2);border-bottom:1px solid rgba(218,165,32,.2);
 }
+.testi-grid{display:grid;gap:1rem;max-width:500px;margin:0 auto}
+.testi-card{background:#fff;border:1px solid rgba(218,165,32,.3);border-radius:14px;padding:1.25rem 1rem;box-shadow:0 2px 12px rgba(139,0,0,.04)}
 .testi-quote{
-  font-family:var(--deva);font-size:1.05rem;color:var(--mr);line-height:1.7;
-  max-width:400px;margin:0 auto .75rem;font-style:italic;
+  font-family:var(--deva);font-size:.95rem;color:var(--mr);line-height:1.7;
+  font-style:italic;margin-bottom:.5rem;
 }
-.testi-name{font-family:var(--deva);font-size:.82rem;color:var(--muted);opacity:.7}
+.testi-name{font-family:var(--deva);font-size:.78rem;color:var(--muted);opacity:.7}
+
+/* ── FAQ ── */
+.faq-sec{padding:3rem 1.5rem;background:var(--ivory);border-top:1px solid rgba(218,165,32,.3);text-align:center}
+.faq-title{font-family:var(--deva);font-size:1.4rem;color:var(--mr);margin-bottom:.25rem}
+.faq-list{max-width:500px;margin:1.5rem auto 0;text-align:left}
+.faq-item{
+  background:#fff;border:1px solid rgba(218,165,32,.3);border-radius:12px;
+  margin-bottom:.75rem;overflow:hidden;box-shadow:0 2px 8px rgba(139,0,0,.04);
+}
+.faq-item summary{
+  font-family:var(--deva);font-size:1rem;color:var(--mr);padding:1rem 1.25rem;
+  cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;
+  font-weight:500;line-height:1.5;
+}
+.faq-item summary::after{content:'▸';color:var(--gd);font-size:1.1rem;transition:transform .2s}
+.faq-item[open] summary::after{transform:rotate(90deg)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item p{
+  font-family:var(--deva);font-size:.9rem;color:var(--muted);line-height:1.8;
+  padding:0 1.25rem 1rem;border-top:1px solid rgba(218,165,32,.15);
+}
 
 /* ── VISION ── */
 .vision-sec{

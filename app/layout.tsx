@@ -11,7 +11,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'सनातन परिवार — हिंदू समुदाय की डिजिटल पहचान | Sanatan Parivar',
   description: 'सनातन परिवार — भारत का सबसे बड़ा सनातनी डिजिटल समुदाय। निःशुल्क सदस्यता लें, सनातनी पहचान पाएं, दैनिक श्लोक पढ़ें। Join India\'s largest Sanatani digital community. Free membership, daily shlokas, digital ID card.',
-  keywords: ['सनातन परिवार', 'सनातन धर्म', 'हिंदू समुदाय', 'sanatan parivar', 'hindu community', 'sanatan dharma', 'digital hindu identity', 'daily shloka', 'bhagavad gita', 'सनातनी पहचान', 'हिंदू पहचान पत्र', 'सनातन परिवार रजिस्ट्रेशन'],
+  keywords: ['सनातन परिवार', 'सनातन धर्म', 'हिंदू समुदाय', 'sanatan parivar', 'hindu community', 'sanatan dharma', 'digital hindu identity', 'daily shloka', 'bhagavad gita', 'सनातनी पहचान', 'हिंदू पहचान पत्र', 'सनातन परिवार रजिस्ट्रेशन', 'गीता श्लोक', 'आज का श्लोक', 'हिंदू धर्म', 'भगवद गीता', 'हिंदू संस्कृति', 'वेद उपनिषद', 'सनातन संस्कृति', 'हिंदू एकता', 'धर्म रक्षा', 'sanatan dharma registration', 'hindu identity card', 'free hindu membership', 'bhagavad gita shloka hindi', 'daily mantra hindi', 'hindu organization india'],
   manifest: '/manifest.json',
   metadataBase: new URL('https://sanatanparivar.in'),
   alternates: { canonical: '/', languages: { 'hi-IN': '/', 'en-IN': '/' } },
@@ -48,6 +48,18 @@ const jsonLd = {
   contactPoint: { '@type': 'ContactPoint', email: 'contact@sanatanparivar.in', contactType: 'customer service', availableLanguage: ['Hindi', 'English'] },
 };
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: 'सनातन परिवार क्या है?', acceptedAnswer: { '@type': 'Answer', text: 'सनातन परिवार भारत का सबसे बड़ा सनातनी डिजिटल समुदाय है। यहाँ आप निःशुल्क सदस्यता लेकर अपनी सनातनी पहचान पा सकते हैं, प्रतिदिन गीता के श्लोक पढ़ सकते हैं, और लाखों सनातनियों से जुड़ सकते हैं।' } },
+    { '@type': 'Question', name: 'सनातन परिवार में कैसे जुड़ें?', acceptedAnswer: { '@type': 'Answer', text: 'SanatanParivar.in पर जाएं, "अभी जुड़ें" बटन दबाएं, अपना नाम भरें और 30 सेकंड में निःशुल्क सदस्यता पाएं। आपको तुरंत डिजिटल पहचान पत्र मिलेगा।' } },
+    { '@type': 'Question', name: 'क्या सनातन परिवार की सदस्यता निःशुल्क है?', acceptedAnswer: { '@type': 'Answer', text: 'हाँ, सनातन परिवार की सदस्यता पूर्णतः निःशुल्क है और सदा रहेगी। कोई छिपा शुल्क नहीं है।' } },
+    { '@type': 'Question', name: 'सनातन परिवार का पहचान पत्र क्या है?', acceptedAnswer: { '@type': 'Answer', text: 'यह एक डिजिटल सामुदायिक पहचान पत्र है जो आपके सनातन परिवार की सदस्यता को दर्शाता है। इसमें आपका नाम, सदस्य संख्या और तिथि होती है। आप इसे डाउनलोड और WhatsApp पर शेयर कर सकते हैं। यह शासकीय दस्तावेज़ नहीं है।' } },
+    { '@type': 'Question', name: 'आज का श्लोक कहाँ पढ़ें?', acceptedAnswer: { '@type': 'Answer', text: 'SanatanParivar.in पर प्रतिदिन भगवद् गीता, उपनिषद् और वेदों से एक नया श्लोक अर्थ सहित प्रकाशित होता है। आप इसे WhatsApp पर भी शेयर कर सकते हैं।' } },
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="hi">
@@ -57,6 +69,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/icon.svg" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+        {/* AdSense — replace ca-pub-XXXXXXX with your AdSense publisher ID */}
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossOrigin="anonymous" />
       </head>
       <body>{children}</body>
     </html>
