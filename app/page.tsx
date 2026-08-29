@@ -139,9 +139,26 @@ export default function Home() {
       <section className="hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <picture>
-          <source srcSet="/hero-bg.webp" type="image/webp" />
-          <img src="/hero-bg.jpg" alt="" className="hero-img" aria-hidden="true"
-            width={1600} height={900} fetchPriority="high" decoding="async" />
+          <source
+            type="image/avif"
+            srcSet="/hero-480.avif 480w, /hero-768.avif 768w, /hero-1100.avif 1100w, /hero-1365.avif 1365w"
+            sizes="100vw"
+          />
+          <source
+            type="image/webp"
+            srcSet="/hero-480.webp 480w, /hero-768.webp 768w, /hero-1100.webp 1100w, /hero-1365.webp 1365w"
+            sizes="100vw"
+          />
+          <img
+            src="/hero-1100.jpg"
+            alt=""
+            className="hero-img"
+            aria-hidden="true"
+            width={1365}
+            height={768}
+            fetchPriority="high"
+            decoding="async"
+          />
         </picture>
         <div className="hero-overlay" />
         <div className="diya diya-l">🪔</div>

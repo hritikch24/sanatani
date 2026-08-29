@@ -32,7 +32,9 @@ body{font-family:var(--en);background:var(--cr);color:var(--text);min-height:100
   position:relative;overflow:hidden;min-height:100svh;
   display:flex;flex-direction:column;justify-content:center;align-items:center;
   padding:3rem 1.5rem 7rem;
-  background:#1a0a00;
+  /* 114-byte blurred placeholder paints instantly under the real image,
+     so the hero is never an empty dark box on a slow connection. */
+  background:#1a0a00 url("data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQBACdASoUAAsAPwFqrU8rJiQiMAgBYCAJaACdMoADTMRrCQuVPtwoAAD82HDhDNSSxbCk0urezSpKaI9VQFsDfu3RiKbPmovCM6i0LpL7+VqP+Xq/1TywqDdRSAAA") center/cover no-repeat;
   text-align:center;
 }
 .hero-img{

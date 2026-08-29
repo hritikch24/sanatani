@@ -21,7 +21,7 @@ const nextConfig = {
       },
       {
         // Fingerprint-free static assets we control; safe to cache hard.
-        source: '/:file(hero-bg.webp|hero-bg.jpg|og-image.jpg|icon-192.png|icon-512.png|apple-touch-icon.png|icon.svg|india.svg)',
+        source: '/:file(hero-480.avif|hero-768.avif|hero-1100.avif|hero-1365.avif|hero-480.webp|hero-768.webp|hero-1100.webp|hero-1365.webp|hero-1100.jpg|og-image.jpg|icon-192.png|icon-512.png|apple-touch-icon.png|icon.svg|india.svg)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
