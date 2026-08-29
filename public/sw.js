@@ -17,7 +17,7 @@
 const CACHE = 'sp-v3';
 const OFFLINE_FALLBACK = '/';
 
-const IMMUTABLE = /^\/(_next\/static\/|hero-\d+\.(avif|webp|jpg)$|og-image\.jpg$|icon(-\d+)?\.(png|svg)$|apple-touch-icon\.png$|india\.svg$|manifest\.json$)/;
+const IMMUTABLE = /^\/(?:_next\/static\/|[a-z-]+-\d+\.(?:avif|webp|jpg)$|og-[a-z-]*\.jpg$|icon(?:-\d+)?\.(?:png|svg)$|apple-touch-icon\.png$|india\.svg$|manifest\.json$)/;
 
 self.addEventListener('install', e => {
   e.waitUntil(

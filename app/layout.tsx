@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: 'सनातन परिवार | Sanatan Parivar',
     locale: 'hi_IN',
     type: 'website',
-    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'सनातन परिवार — Sanatan Parivar' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'सनातन परिवार — ॐ' }],
   },
   twitter: {
     card: 'summary_large_image',

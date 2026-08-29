@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SacredStrip, SiteNav, SiteFooter, Crumbs, SecOrn, JoinBand, RelatedLinks, Ld, articleLd, crumbLd, faqLd } from '../components/SiteChrome';
+import { Banner } from '../components/Banner';
 
 export const metadata: Metadata = {
   title: 'गुरुकुल परम्परा — प्राचीन भारत की शिक्षा व्यवस्था, तक्षशिला एवं नालंदा | सनातन परिवार',
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     title: 'गुरुकुल परम्परा — प्राचीन भारत की शिक्षा व्यवस्था',
     description: 'गुरु-शिष्य परम्परा, गुरुकुल की दिनचर्या, तक्षशिला–नालंदा, गुरुदक्षिणा और आधुनिक पुनरुत्थान।',
     url: 'https://sanatanparivar.in/gurukul',
+    images: [{ url: '/og-gurukul.jpg', width: 1200, height: 630, alt: 'प्राचीन भारत का गुरुकुल — वटवृक्ष के नीचे गुरु और शिष्य' }],
     type: 'article',
   },
 };
@@ -36,6 +38,7 @@ export default function GurukulPage() {
       <SiteNav active="/gurukul" />
       <main className="art-wrap">
         <Crumbs items={CRUMBS} />
+        <Banner name="gurukul" widths={[480, 760, 1120]} alt="प्राचीन भारत का गुरुकुल — वटवृक्ष के नीचे गुरु और शिष्य" priority />
 
         <header className="art-head">
           <div className="art-head-om">ॐ</div>

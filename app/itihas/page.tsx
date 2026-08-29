@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { SacredStrip, SiteNav, SiteFooter, Crumbs, SecOrn, JoinBand, RelatedLinks, Ld, articleLd, crumbLd, faqLd } from '../components/SiteChrome';
+import { Banner } from '../components/Banner';
 
 export const metadata: Metadata = {
   title: 'सनातन धर्म का इतिहास — वैदिक काल से आज तक की पूरी यात्रा | सनातन परिवार',
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
     title: 'सनातन धर्म का इतिहास — वैदिक काल से आज तक',
     description: 'सिंधु-सरस्वती सभ्यता से आधुनिक पुनर्जागरण तक सनातन धर्म की पूरी यात्रा।',
     url: 'https://sanatanparivar.in/itihas',
+    images: [{ url: '/og-itihas.jpg', width: 1200, height: 630, alt: 'सनातन धर्म की कालयात्रा — सिंधु-सरस्वती सभ्यता से भक्ति काल तक' }],
     type: 'article',
   },
 };
@@ -35,6 +37,7 @@ export default function ItihasPage() {
       <SiteNav active="/itihas" />
       <main className="art-wrap">
         <Crumbs items={CRUMBS} />
+        <Banner name="itihas" widths={[480, 760, 1120]} alt="सनातन धर्म की कालयात्रा — सिंधु-सरस्वती सभ्यता से भक्ति काल तक" priority />
 
         <header className="art-head">
           <div className="art-head-om">ॐ</div>

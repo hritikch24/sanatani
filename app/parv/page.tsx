@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import { SacredStrip, SiteNav, SiteFooter, Crumbs, JoinBand, RelatedLinks, Ld, articleLd, crumbLd, faqLd } from '../components/SiteChrome';
+import { Banner } from '../components/Banner';
 
 export const metadata: Metadata = {
   title: 'हिंदू पर्व एवं त्योहार — पूरी सूची, महत्व एवं व्रत | सनातन परिवार',
   description: 'सनातन धर्म के सभी प्रमुख पर्व एवं त्योहार — मकर संक्रांति, महाशिवरात्रि, होली, राम नवमी, रक्षाबंधन, जन्माष्टमी, गणेश चतुर्थी, नवरात्रि, दशहरा, दीपावली और छठ। हर पर्व का महत्व, तिथि और व्रत विधि।',
   keywords: ['हिंदू त्योहार', 'हिंदू पर्व सूची', 'सनातन त्योहार', 'महाशिवरात्रि', 'नवरात्रि', 'दीपावली महत्व', 'रक्षाबंधन', 'जन्माष्टमी', 'गणेश चतुर्थी', 'एकादशी व्रत', 'hindu festivals list', 'hindu festival calendar', 'व्रत एवं उपवास', 'छठ पूजा', 'होली क्यों मनाई जाती है'],
   alternates: { canonical: '/parv' },
-  openGraph: { title: 'हिंदू पर्व एवं त्योहार — पूरी सूची एवं महत्व', description: 'सनातन धर्म के सभी प्रमुख पर्वों का महत्व, तिथि और व्रत विधि।', url: 'https://sanatanparivar.in/parv', type: 'article' },
+  openGraph: { title: 'हिंदू पर्व एवं त्योहार — पूरी सूची एवं महत्व', description: 'सनातन धर्म के सभी प्रमुख पर्वों का महत्व, तिथि और व्रत विधि।', url: 'https://sanatanparivar.in/parv',
+    images: [{ url: '/og-parv.jpg', width: 1200, height: 630, alt: 'दीप, रंगोली एवं पुष्प — सनातन पर्वों की सजावट' }], type: 'article' },
 };
 
 const CRUMBS = [{ href: '/', label: 'मुख्य पृष्ठ' }, { href: '/parv', label: 'पर्व एवं त्योहार' }];
@@ -59,6 +61,7 @@ export default function ParvPage() {
       <SiteNav active="/parv" />
       <main className="art-wrap">
         <Crumbs items={CRUMBS} />
+        <Banner name="parv" widths={[480, 760, 1120]} alt="दीप, रंगोली एवं पुष्प — सनातन पर्वों की सजावट" priority />
         <header className="art-head">
           <div className="art-head-om">🪔</div>
           <h1 className="art-h1">हिंदू पर्व एवं त्योहार</h1>

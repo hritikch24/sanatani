@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 import { SacredStrip, SiteNav, SiteFooter, Crumbs, JoinBand, RelatedLinks, Ld, articleLd, crumbLd, faqLd } from '../components/SiteChrome';
+import { Banner } from '../components/Banner';
 
 export const metadata: Metadata = {
   title: '12 ज्योतिर्लिंग, चार धाम एवं शक्तिपीठ — तीर्थ स्थलों की पूरी सूची | सनातन परिवार',
   description: 'बारह ज्योतिर्लिंग की सूची स्थान सहित, चार धाम एवं छोटा चार धाम, शक्तिपीठ, सप्त पुरी और कुम्भ के चार स्थल। सनातन धर्म के सभी प्रमुख तीर्थ एक जगह।',
   keywords: ['12 ज्योतिर्लिंग', 'ज्योतिर्लिंग सूची', 'चार धाम', 'छोटा चार धाम', 'शक्तिपीठ', 'सप्त पुरी', 'कुम्भ मेला', '12 jyotirlinga list', 'char dham yatra', 'shakti peeth', 'काशी विश्वनाथ', 'केदारनाथ', 'सोमनाथ', 'हिंदू तीर्थ स्थल'],
   alternates: { canonical: '/mandir' },
-  openGraph: { title: '12 ज्योतिर्लिंग, चार धाम एवं शक्तिपीठ', description: 'सनातन धर्म के सभी प्रमुख तीर्थ स्थलों की पूरी सूची।', url: 'https://sanatanparivar.in/mandir', type: 'article' },
+  openGraph: { title: '12 ज्योतिर्लिंग, चार धाम एवं शक्तिपीठ', description: 'सनातन धर्म के सभी प्रमुख तीर्थ स्थलों की पूरी सूची।', url: 'https://sanatanparivar.in/mandir',
+    images: [{ url: '/og-mandir.jpg', width: 1200, height: 630, alt: 'बारह ज्योतिर्लिंग मंडल' }], type: 'article' },
 };
 
 const CRUMBS = [{ href: '/', label: 'मुख्य पृष्ठ' }, { href: '/mandir', label: 'तीर्थ एवं मंदिर' }];
@@ -44,6 +46,7 @@ export default function MandirPage() {
       <SiteNav active="/mandir" />
       <main className="art-wrap">
         <Crumbs items={CRUMBS} />
+        <Banner name="mandir" widths={[480, 760, 1024]} sizes="(max-width: 480px) 90vw, 420px" alt="बारह ज्योतिर्लिंग मंडल" ratio={"1 / 1"} priority narrow />
         <header className="art-head">
           <div className="art-head-om">🛕</div>
           <h1 className="art-h1">तीर्थ, ज्योतिर्लिंग एवं धाम</h1>

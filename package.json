@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "images": "node scripts/build-images.mjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.9.4",
@@ -17,6 +18,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "sharp": "^0.35.4",
     "typescript": "^5"
   }
 }

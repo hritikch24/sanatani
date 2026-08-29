@@ -20,8 +20,13 @@ const nextConfig = {
         ],
       },
       {
-        // Fingerprint-free static assets we control; safe to cache hard.
-        source: '/:file(hero-480.avif|hero-768.avif|hero-1100.avif|hero-1365.avif|hero-480.webp|hero-768.webp|hero-1100.webp|hero-1365.webp|hero-1100.jpg|og-image.jpg|icon-192.png|icon-512.png|apple-touch-icon.png|icon.svg|india.svg)',
+        // Derived image variants are content-stable: the filename encodes the
+        // width, and any new artwork is emitted under a new source name.
+        source: '/:file(.*\\-\\d+\\.(?:avif|webp|jpg))',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
+      {
+        source: '/:file(og-.*\\.jpg|og-image\\.jpg|icon-\\d+\\.png|apple-touch-icon\\.png|icon\\.svg|india\\.svg)',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
       {
