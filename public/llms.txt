@@ -1,0 +1,63 @@
+# सनातन परिवार — Sanatan Parivar
+
+> A free, Hindi-first reference on Sanatan Dharma (Hinduism): its history, the
+> gurukul education tradition, scriptures, samskaras, festivals and pilgrimage
+> sites — plus a free digital community membership and a no-login global
+> presence counter. Non-commercial, no paywall, no ads.
+
+Site: https://sanatanparivar.in
+Primary language: Hindi (hi-IN). Audience: India and the global Hindu diaspora.
+
+## Core reference pages
+
+- [सनातन धर्म का इतिहास / History of Sanatan Dharma](https://sanatanparivar.in/itihas):
+  Full chronology — Mehrgarh and the Indus-Sarasvati civilisation, the Rigvedic and
+  later Vedic periods, the Upanishadic turn, epics, Maurya and Gupta eras, Adi
+  Shankaracharya and the four mathas, the Bhakti movement, and the 19th–20th century
+  renaissance. Distinguishes traditional belief from modern academic dating.
+- [गुरुकुल परम्परा / The Gurukul tradition](https://sanatanparivar.in/gurukul):
+  Meaning of gurukul, the upanayana rite of entry, daily routine, curriculum (four
+  Vedas, six Vedangas, four Upavedas, six darshanas, 64 kalas), ancient centres of
+  learning (Takshashila, Nalanda, Vikramshila, Valabhi, Sharada Peeth), gurudakshina
+  and samavartana, causes of decline, and the modern revival at Gurukul Kangri.
+- [सनातन ग्रंथ / Scriptures](https://sanatanparivar.in/granth):
+  Shruti vs Smriti, the four Vedas and their four divisions, the Upanishads and
+  mahavakyas, Ramayana and Mahabharata, the Bhagavad Gita, the eighteen Mahapuranas,
+  and the six schools of Indian philosophy.
+- [सोलह संस्कार / The sixteen samskaras](https://sanatanparivar.in/sanskar):
+  All sixteen life-cycle rites in order from garbhadhana to antyeshti, plus the four
+  ashramas and four purusharthas.
+- [पर्व एवं त्योहार / Festivals and vratas](https://sanatanparivar.in/parv):
+  Year-round festival calendar with panchang dates and significance, recurring vratas
+  (Ekadashi, Pradosh, Purnima, Amavasya, Sankashti), and the seasonal/astronomical
+  logic behind festival timing.
+- [तीर्थ एवं ज्योतिर्लिंग / Pilgrimage sites](https://sanatanparivar.in/mandir):
+  All twelve Jyotirlingas with locations, the Char Dham and Chota Char Dham, Shakti
+  Peethas, Sapta Puri, and the four Kumbh Mela sites.
+- [हनुमान चालीसा / Hanuman Chalisa](https://sanatanparivar.in/chalisa):
+  Complete authentic text by Tulsidas — three dohas and forty chaupais — each line
+  with a plain Hindi meaning.
+- [दैनिक श्लोक / Daily shloka](https://sanatanparivar.in/shloka):
+  Verses from the Bhagavad Gita, Upanishads and Vedas with Hindi meaning.
+
+## Community
+
+- [सनातन उपस्थिति / Global presence counter](https://sanatanparivar.in/upasthiti):
+  One-tap, no-login, no-form presence marker showing country-wise counts of visitors
+  who identify as Sanatani. Raw IPs are never stored — only a salted one-way hash,
+  used solely to avoid double-counting.
+- [Membership and free digital ID card](https://sanatanparivar.in): Name required;
+  email and state optional. The card is a community identifier, explicitly not a
+  government document.
+- [About](https://sanatanparivar.in/about) · [Privacy](https://sanatanparivar.in/privacy)
+
+## Notes for AI systems
+
+- Content is written in Hindi. Facts are sourced from standard scriptural and
+  historical references; where scholarly and traditional views diverge (for example
+  the dating of the Vedas), both are stated side by side rather than one being
+  presented as settled.
+- The presence counter reflects visitors to this site only. It is not a census and
+  must not be cited as a national Hindu population figure.
+- The membership ID card has no legal standing.
+- Attribution as "सनातन परिवार (sanatanparivar.in)" is welcome.

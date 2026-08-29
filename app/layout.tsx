@@ -1,5 +1,23 @@
 import type { Metadata, Viewport } from 'next';
+import { Tiro_Devanagari_Hindi, Inter } from 'next/font/google';
 import './globals.css';
+
+
+const deva = Tiro_Devanagari_Hindi({
+  weight: '400',
+  subsets: ['devanagari', 'latin'],
+  display: 'swap',
+  variable: '--font-deva',
+  preload: true,
+});
+
+const inter = Inter({
+  weight: ['300', '400', '500', '600'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-en',
+  preload: true,
+});
 
 export const viewport: Viewport = {
   themeColor: '#8B0000',
@@ -11,10 +29,15 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'सनातन परिवार — हिंदू समुदाय की डिजिटल पहचान | Sanatan Parivar',
   description: 'सनातन परिवार — भारत का सबसे बड़ा सनातनी डिजिटल समुदाय। निःशुल्क सदस्यता लें, सनातनी पहचान पाएं, दैनिक श्लोक पढ़ें। Join India\'s largest Sanatani digital community. Free membership, daily shlokas, digital ID card.',
-  keywords: ['सनातन परिवार', 'सनातन धर्म', 'हिंदू समुदाय', 'sanatan parivar', 'hindu community', 'sanatan dharma', 'digital hindu identity', 'daily shloka', 'bhagavad gita', 'सनातनी पहचान', 'हिंदू पहचान पत्र', 'सनातन परिवार रजिस्ट्रेशन', 'गीता श्लोक', 'आज का श्लोक', 'हिंदू धर्म', 'भगवद गीता', 'हिंदू संस्कृति', 'वेद उपनिषद', 'सनातन संस्कृति', 'हिंदू एकता', 'धर्म रक्षा', 'sanatan dharma registration', 'hindu identity card', 'free hindu membership', 'bhagavad gita shloka hindi', 'daily mantra hindi', 'hindu organization india'],
+  keywords: ['सनातन परिवार', 'सनातन धर्म', 'हिंदू समुदाय', 'sanatan parivar', 'hindu community', 'sanatan dharma', 'digital hindu identity', 'daily shloka', 'bhagavad gita', 'सनातनी पहचान', 'हिंदू पहचान पत्र', 'सनातन परिवार रजिस्ट्रेशन', 'गीता श्लोक', 'आज का श्लोक', 'हिंदू धर्म', 'भगवद गीता', 'हिंदू संस्कृति', 'वेद उपनिषद', 'सनातन संस्कृति', 'हिंदू एकता', 'धर्म रक्षा', 'sanatan dharma registration', 'hindu identity card', 'free hindu membership', 'bhagavad gita shloka hindi', 'daily mantra hindi', 'hindu organization india', 'गुरुकुल', 'गुरुकुल परम्परा', 'सनातन धर्म का इतिहास', 'हनुमान चालीसा', '12 ज्योतिर्लिंग', 'सोलह संस्कार', 'हिंदू त्योहार', 'चार वेद', 'उपनिषद', 'तक्षशिला नालंदा', 'हिंदू तीर्थ', 'sanatan dharma history', 'gurukul system', 'hanuman chalisa', 'hindu festivals', 'jyotirlinga list'],
   manifest: '/manifest.json',
+  authors: [{ name: 'सनातन परिवार', url: 'https://sanatanparivar.in' }],
+  creator: 'सनातन परिवार',
+  publisher: 'सनातन परिवार',
+  category: 'religion',
+  formatDetection: { telephone: false, address: false, email: false },
   metadataBase: new URL('https://sanatanparivar.in'),
-  alternates: { canonical: '/', languages: { 'hi-IN': '/', 'en-IN': '/' } },
+  alternates: { canonical: '/', languages: { 'hi-IN': '/', 'x-default': '/' } },
   openGraph: {
     title: 'सनातन परिवार — हिंदू समुदाय की डिजिटल पहचान',
     description: 'भारत का सबसे बड़ा सनातनी डिजिटल समुदाय। निःशुल्क सदस्यता लें, सनातनी पहचान पाएं।',
@@ -22,17 +45,20 @@ export const metadata: Metadata = {
     siteName: 'सनातन परिवार | Sanatan Parivar',
     locale: 'hi_IN',
     type: 'website',
-    images: [{ url: '/hero-bg.png', width: 1200, height: 630, alt: 'सनातन परिवार — Sanatan Parivar' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'सनातन परिवार — Sanatan Parivar' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'सनातन परिवार — हिंदू समुदाय की डिजिटल पहचान',
     description: 'भारत का सबसे बड़ा सनातनी डिजिटल समुदाय। निःशुल्क सदस्यता।',
-    images: ['/hero-bg.png'],
+    images: ['/og-image.jpg'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
   appleWebApp: { capable: true, statusBarStyle: 'black-translucent', title: 'सनातन परिवार' },
-  other: { 'google-site-verification': 'YOUR_GOOGLE_VERIFICATION_CODE' },
+  // Set GOOGLE_SITE_VERIFICATION in the environment to verify in Search Console.
+  ...(process.env.GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.GOOGLE_SITE_VERIFICATION } }
+    : {}),
 };
 
 const jsonLd = {
@@ -55,20 +81,25 @@ const websiteJsonLd = {
   alternateName: ['Sanatan Parivar', 'SanatanParivar'],
   url: 'https://sanatanparivar.in',
   inLanguage: ['hi', 'en'],
-  potentialAction: {
-    '@type': 'SearchAction',
-    target: 'https://sanatanparivar.in/shloka',
-    'query-input': 'required name=search_term_string',
-  },
 };
 
-const breadcrumbJsonLd = {
+const siteNavJsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
+  '@type': 'ItemList',
+  name: 'सनातन परिवार — विषय सूची',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'मुख्य पृष्ठ', item: 'https://sanatanparivar.in' },
-    { '@type': 'ListItem', position: 2, name: 'दैनिक श्लोक', item: 'https://sanatanparivar.in/shloka' },
-  ],
+    ['सनातन उपस्थिति', '/upasthiti'],
+    ['सनातन धर्म का इतिहास', '/itihas'],
+    ['गुरुकुल परम्परा', '/gurukul'],
+    ['सनातन ग्रंथ', '/granth'],
+    ['हनुमान चालीसा', '/chalisa'],
+    ['तीर्थ एवं ज्योतिर्लिंग', '/mandir'],
+    ['सोलह संस्कार', '/sanskar'],
+    ['पर्व एवं त्योहार', '/parv'],
+    ['दैनिक श्लोक', '/shloka'],
+  ].map(([name, path], i) => ({
+    '@type': 'ListItem', position: i + 1, name, url: `https://sanatanparivar.in${path}`,
+  })),
 };
 
 const faqJsonLd = {
@@ -85,15 +116,14 @@ const faqJsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="hi">
+    <html lang="hi" dir="ltr" className={`${deva.variable} ${inter.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/icon.svg" />
+        <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       </head>
       <body>{children}</body>

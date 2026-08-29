@@ -1,6 +1,8 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import Script from 'next/script';
+import Link from 'next/link';
+import { SiteNav, NAV } from './components/SiteChrome';
 
 interface Member { name: string; id: string; date: string }
 interface Shloka { s: string; m: string; src: string }
@@ -131,11 +133,16 @@ export default function Home() {
 
       {/* SACRED STRIP */}
       <div className="sacred-strip">ॐ नमः शिवाय &nbsp;✦&nbsp; जय श्री राम &nbsp;✦&nbsp; हर हर महादेव</div>
+      <SiteNav active="/" />
 
       {/* HERO */}
       <section className="hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/hero-bg.png" alt="" className="hero-img" aria-hidden="true" />
+        <picture>
+          <source srcSet="/hero-bg.webp" type="image/webp" />
+          <img src="/hero-bg.jpg" alt="" className="hero-img" aria-hidden="true"
+            width={1600} height={900} fetchPriority="high" decoding="async" />
+        </picture>
         <div className="hero-overlay" />
         <div className="diya diya-l">🪔</div>
         <div className="diya diya-r">🪔</div>
@@ -290,6 +297,58 @@ export default function Home() {
         </section>
       )}
 
+      {/* EXPLORE — internal linking hub */}
+      <section className="explore-sec">
+        <SecOrn sym="ॐ" />
+        <h2 className="explore-title">सनातन ज्ञान — विस्तार से जानें</h2>
+        <SecOrn sym="✦" />
+        <p className="explore-sub">
+          सनातन धर्म का इतिहास, गुरुकुल परम्परा, वेद-उपनिषद्, तीर्थ और पर्व — सब एक जगह, सरल हिंदी में।
+        </p>
+        <div className="explore-grid">
+          <Link href="/upasthiti" className="explore-card">
+            <span className="ec-icon">🌍</span>
+            <span className="ec-name">सनातन उपस्थिति</span>
+            <span className="ec-desc">एक क्लिक में उपस्थिति दर्ज करें — देखें किस देश से कितने सनातनी जुड़े</span>
+          </Link>
+          <Link href="/itihas" className="explore-card">
+            <span className="ec-icon">📜</span>
+            <span className="ec-name">सनातन का इतिहास</span>
+            <span className="ec-desc">सिंधु-सरस्वती से आधुनिक पुनर्जागरण तक की पूरी यात्रा</span>
+          </Link>
+          <Link href="/gurukul" className="explore-card">
+            <span className="ec-icon">🎓</span>
+            <span className="ec-name">गुरुकुल परम्परा</span>
+            <span className="ec-desc">तक्षशिला, नालंदा और प्राचीन भारत की शिक्षा व्यवस्था</span>
+          </Link>
+          <Link href="/granth" className="explore-card">
+            <span className="ec-icon">📖</span>
+            <span className="ec-name">सनातन ग्रंथ</span>
+            <span className="ec-desc">वेद, उपनिषद्, पुराण, रामायण, महाभारत एवं गीता</span>
+          </Link>
+          <Link href="/chalisa" className="explore-card">
+            <span className="ec-icon">🚩</span>
+            <span className="ec-name">हनुमान चालीसा</span>
+            <span className="ec-desc">पूर्ण पाठ, चालीस चौपाइयाँ हिंदी अर्थ सहित</span>
+          </Link>
+          <Link href="/mandir" className="explore-card">
+            <span className="ec-icon">🛕</span>
+            <span className="ec-name">तीर्थ एवं ज्योतिर्लिंग</span>
+            <span className="ec-desc">12 ज्योतिर्लिंग, चार धाम, शक्तिपीठ एवं कुम्भ</span>
+          </Link>
+          <Link href="/sanskar" className="explore-card">
+            <span className="ec-icon">🪔</span>
+            <span className="ec-name">सोलह संस्कार</span>
+            <span className="ec-desc">जन्म से अंत्येष्टि तक — जीवन के सोलह पड़ाव</span>
+          </Link>
+          <Link href="/parv" className="explore-card">
+            <span className="ec-icon">🎊</span>
+            <span className="ec-name">पर्व एवं त्योहार</span>
+            <span className="ec-desc">वर्षभर के सभी पर्व, व्रत एवं उनका महत्व</span>
+          </Link>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="faq-sec">
         <SecOrn sym="ॐ" />
@@ -309,6 +368,9 @@ export default function Home() {
       <footer>
         <div className="footer-om">ॐ</div>
         <Ornament />
+        <div className="footer-nav">
+          {NAV.filter(n => n.href !== '/').map(n => <Link key={n.href} href={n.href}>{n.label}</Link>)}
+        </div>
         <div className="footer-links">
           <a href="/about">हमारे बारे में</a>
           <a href="/shloka">दैनिक श्लोक</a>

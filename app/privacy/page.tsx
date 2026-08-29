@@ -14,22 +14,36 @@ export default function PrivacyPage() {
         गोपनीयता नीति
       </h1>
       <h2 style={{ fontSize: '1.1rem', color: '#888', fontWeight: 400, marginBottom: '2rem' }}>Privacy Policy</h2>
-      <p style={{ ...S, fontSize: '.82rem', color: '#aaa' }}>अंतिम अपडेट: अप्रैल 2026 | Last updated: April 2026</p>
+      <p style={{ ...S, fontSize: '.82rem', color: '#aaa' }}>अंतिम अपडेट: अगस्त 2026 | Last updated: August 2026</p>
 
       <div style={S}>
         <h3 style={H}>1. हम क्या डेटा एकत्र करते हैं / Data We Collect</h3>
+        <p><strong>पहचान पत्र पंजीकरण करने पर / When you register for an ID card:</strong></p>
         <ul style={{ paddingLeft: '1.5rem' }}>
           <li>नाम (अनिवार्य) / Name (required)</li>
-          <li>शहर (वैकल्पिक) / City (optional)</li>
-          <li>गोत्र (वैकल्पिक) / Gotra (optional)</li>
+          <li>ईमेल (वैकल्पिक) / Email (optional)</li>
+          <li>राज्य (वैकल्पिक) / State (optional)</li>
           <li>पंजीकरण तिथि / Registration timestamp</li>
         </ul>
+        <p style={{ marginTop: '.75rem' }}><strong>सनातन उपस्थिति पृष्ठ पर / On the presence page (/upasthiti):</strong></p>
+        <ul style={{ paddingLeft: '1.5rem' }}>
+          <li>कोई नाम या ईमेल नहीं / No name or email is collected</li>
+          <li>आपके IP का साल्टेड हैश — मूल IP संग्रहित नहीं होता / A salted hash of your IP; the raw IP is never stored</li>
+          <li>केवल देश-स्तर की जानकारी / Country-level location only</li>
+          <li>दर्शन की संख्या एवं समय / Visit count and timestamp</li>
+        </ul>
+        <p style={{ marginTop: '.5rem', fontSize: '.85rem', opacity: .85 }}>
+          हैश एकतरफ़ा है — उससे आपका वास्तविक IP पुनः प्राप्त नहीं किया जा सकता। इसका उद्देश्य केवल यह है
+          कि एक ही व्यक्ति दोबारा गिना न जाए।<br />
+          The hash is one-way and cannot be reversed to your IP. It exists only to avoid double-counting the same visitor.
+        </p>
       </div>
 
       <div style={S}>
         <h3 style={H}>2. उपयोग का उद्देश्य / Purpose of Use</h3>
-        <p>सामुदायिक सदस्यता निर्देशिका और व्यक्तिगत आध्यात्मिक सामग्री प्रदान करना।</p>
-        <p>Community membership directory and personalized spiritual content delivery.</p>
+        <p>सामुदायिक सदस्यता निर्देशिका, डिजिटल पहचान पत्र, तथा देश अनुसार सामुदायिक उपस्थिति के आँकड़े दिखाना।</p>
+        <p>Community membership directory, digital ID cards, and aggregate country-wise presence statistics.</p>
+        <p style={{ marginTop: '.5rem' }}>हम विज्ञापन या ट्रैकिंग कुकी का उपयोग नहीं करते। / We use no advertising or tracking cookies.</p>
       </div>
 
       <div style={S}>
