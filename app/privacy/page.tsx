@@ -32,6 +32,21 @@ export default function PrivacyPage() {
           <li>केवल देश-स्तर की जानकारी / Country-level location only</li>
           <li>दर्शन की संख्या एवं समय / Visit count and timestamp</li>
         </ul>
+        <p style={{ marginTop: '.75rem' }}><strong>प्रत्येक पृष्ठ पर / On every page:</strong></p>
+        <ul style={{ paddingLeft: '1.5rem' }}>
+          <li>देखा गया पृष्ठ एवं समय / Page visited and timestamp</li>
+          <li>आप किस लिंक से आए (referrer) / Referring link</li>
+          <li>उपकरण एवं ब्राउज़र का प्रकार / Device and browser type</li>
+          <li>देश (केवल देश-स्तर) / Country only</li>
+          <li>आपके IP का साल्टेड हैश — मूल IP नहीं / A salted hash of your IP, never the raw IP</li>
+          <li>एक अस्थायी सत्र पहचान, जो टैब बंद होते ही समाप्त हो जाती है / A temporary session id that is discarded when the tab closes</li>
+        </ul>
+        <p style={{ marginTop: '.5rem', fontSize: '.85rem', opacity: .85 }}>
+          यह हमारा अपना आँकड़ा-संग्रह है — कोई तीसरे पक्ष का विश्लेषण उपकरण, विज्ञापन नेटवर्क या
+          ट्रैकिंग कुकी उपयोग नहीं की जाती। इसका उद्देश्य केवल यह समझना है कि कौन सी सामग्री उपयोगी है।<br />
+          This is first-party only — no third-party analytics, ad networks or tracking cookies. It exists
+          solely to understand which content is useful.
+        </p>
         <p style={{ marginTop: '.5rem', fontSize: '.85rem', opacity: .85 }}>
           हैश एकतरफ़ा है — उससे आपका वास्तविक IP पुनः प्राप्त नहीं किया जा सकता। इसका उद्देश्य केवल यह है
           कि एक ही व्यक्ति दोबारा गिना न जाए।<br />

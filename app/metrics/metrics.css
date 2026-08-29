@@ -1,0 +1,105 @@
+/* Dashboard theme — deliberately isolated from the saffron site palette.
+   Scoped under .mx so nothing here leaks into the public pages. */
+.mx{
+  --bg:#0c0a09;--panel:#17130f;--panel-2:#1f1a15;--line:#2f2822;
+  --ink:#f5efe6;--dim:#a89a88;--faint:#6f6355;
+  --gold:#d9a441;--gold-2:#f0c66b;--saffron:#ff7a1a;
+  --good:#38b57a;--info:#4b93e7;--warn:#e0a020;
+  min-height:100vh;background:var(--bg);color:var(--ink);
+  font-family:ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+  padding:1.25rem;
+}
+.mx *{box-sizing:border-box}
+.mx-shell{max-width:1180px;margin:0 auto}
+
+/* Login */
+.mx-login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:1.25rem}
+.mx-login form{background:var(--panel);border:1px solid var(--line);border-radius:16px;
+  padding:2.25rem 1.75rem;width:100%;max-width:360px;box-shadow:0 24px 60px rgba(0,0,0,.55)}
+.mx-badge{width:54px;height:54px;margin:0 auto 1.25rem;border-radius:14px;display:flex;
+  align-items:center;justify-content:center;font-size:1.6rem;
+  background:rgba(217,164,65,.12);border:1px solid rgba(217,164,65,.28);color:var(--gold-2)}
+.mx-login h1{font-size:1.35rem;text-align:center;margin:0 0 .35rem;font-weight:650}
+.mx-login p{text-align:center;color:var(--dim);font-size:.85rem;margin:0 0 1.5rem}
+.mx-input{width:100%;padding:.8rem .9rem;border-radius:10px;background:var(--panel-2);
+  border:1px solid var(--line);color:var(--ink);font-size:.9rem;outline:none}
+.mx-input:focus{border-color:rgba(217,164,65,.55);box-shadow:0 0 0 3px rgba(217,164,65,.14)}
+.mx-btn{width:100%;margin-top:.9rem;padding:.8rem;border:none;border-radius:10px;cursor:pointer;
+  background:var(--gold);color:#1a1206;font-weight:700;font-size:.9rem}
+.mx-btn:disabled{opacity:.45;cursor:not-allowed}
+.mx-err{margin-top:.85rem;padding:.6rem .75rem;border-radius:9px;font-size:.8rem;
+  background:rgba(224,64,64,.1);border:1px solid rgba(224,64,64,.28);color:#ff9a9a}
+
+/* Header */
+.mx-head{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;
+  margin-bottom:1.25rem}
+.mx-title{display:flex;align-items:center;gap:.7rem}
+.mx-title .om{font-size:1.5rem;color:var(--gold-2);line-height:1}
+.mx-title h1{font-size:1.15rem;margin:0;font-weight:650;letter-spacing:.01em}
+.mx-title span{display:block;font-size:.75rem;color:var(--faint);margin-top:.1rem}
+.mx-actions{display:flex;gap:.4rem;align-items:center;flex-wrap:wrap}
+.mx-period{display:flex;gap:.25rem;background:var(--panel);border:1px solid var(--line);
+  border-radius:10px;padding:.25rem}
+.mx-period button{border:none;background:transparent;color:var(--dim);font-size:.78rem;
+  padding:.4rem .7rem;border-radius:7px;cursor:pointer}
+.mx-period button.on{background:var(--gold);color:#1a1206;font-weight:650}
+.mx-icon-btn{border:1px solid var(--line);background:var(--panel);color:var(--dim);
+  border-radius:9px;padding:.45rem .7rem;cursor:pointer;font-size:.78rem}
+.mx-icon-btn:hover{color:var(--ink);border-color:var(--gold)}
+
+/* Tabs */
+.mx-tabs{display:flex;gap:.3rem;overflow-x:auto;margin-bottom:1.1rem;padding-bottom:.2rem}
+.mx-tabs button{flex:0 0 auto;border:1px solid var(--line);background:var(--panel);
+  color:var(--dim);padding:.45rem .9rem;border-radius:100px;font-size:.82rem;cursor:pointer;white-space:nowrap}
+.mx-tabs button.on{background:rgba(217,164,65,.14);border-color:rgba(217,164,65,.5);color:var(--gold-2)}
+
+/* Cards */
+.mx-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.75rem;margin-bottom:1.1rem}
+.mx-stat{background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:1rem}
+.mx-stat.accent{border-color:rgba(217,164,65,.4);background:linear-gradient(160deg,#1c1610,#17130f)}
+.mx-stat .lbl{font-size:.72rem;color:var(--faint);text-transform:uppercase;letter-spacing:.07em}
+.mx-stat .val{font-size:1.7rem;font-weight:680;margin-top:.3rem;line-height:1.1}
+.mx-stat.accent .val{color:var(--gold-2)}
+.mx-stat .sub{font-size:.72rem;color:var(--faint);margin-top:.2rem}
+
+.mx-grid{display:grid;grid-template-columns:1fr;gap:.85rem;margin-bottom:.85rem}
+@media(min-width:760px){.mx-grid.two{grid-template-columns:1fr 1fr}}
+@media(min-width:980px){.mx-grid.three{grid-template-columns:repeat(3,1fr)}}
+
+.mx-card{background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:hidden}
+.mx-card > h2{font-size:.82rem;font-weight:650;margin:0;padding:.8rem 1rem;
+  border-bottom:1px solid var(--line);color:var(--ink);letter-spacing:.02em}
+.mx-card-body{padding:.9rem 1rem}
+
+/* Bars */
+.mx-bars{display:flex;flex-direction:column;gap:.55rem}
+.mx-bar-row{display:grid;grid-template-columns:1fr auto;gap:.5rem;align-items:center}
+.mx-bar-top{display:flex;justify-content:space-between;gap:.6rem;font-size:.8rem;margin-bottom:.28rem}
+.mx-bar-label{color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:230px}
+.mx-bar-val{color:var(--ink);font-variant-numeric:tabular-nums;font-weight:600}
+.mx-bar-track{height:6px;border-radius:100px;background:#241d17;overflow:hidden}
+.mx-bar-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--gold),var(--saffron))}
+.mx-bar-fill.b{background:linear-gradient(90deg,#4b93e7,#2f6dc0)}
+.mx-bar-fill.g{background:linear-gradient(90deg,#38b57a,#219163)}
+.mx-bar-fill.v{background:linear-gradient(90deg,#9a6ce0,#7346bd)}
+
+/* Area chart */
+.mx-chart{width:100%;height:150px;display:block}
+.mx-chart-empty,.mx-empty{color:var(--faint);font-size:.82rem;text-align:center;padding:1.5rem 0}
+
+/* Table */
+.mx-tbl-wrap{overflow-x:auto}
+.mx-tbl{width:100%;border-collapse:collapse;font-size:.82rem;min-width:420px}
+.mx-tbl th{text-align:left;color:var(--faint);font-weight:600;padding:.55rem 1rem;
+  border-bottom:1px solid var(--line);font-size:.72rem;text-transform:uppercase;letter-spacing:.06em}
+.mx-tbl td{padding:.6rem 1rem;border-bottom:1px solid #221c16;color:var(--dim)}
+.mx-tbl tr:last-child td{border-bottom:none}
+.mx-tbl td.k{color:var(--ink);font-weight:600}
+.mx-tbl td.n{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink)}
+.mx-pill{display:inline-block;padding:.15rem .5rem;border-radius:100px;font-size:.7rem;
+  background:rgba(217,164,65,.13);color:var(--gold-2);border:1px solid rgba(217,164,65,.25)}
+
+.mx-note{font-size:.75rem;color:var(--faint);margin-top:.9rem;line-height:1.7}
+.mx-spin{display:inline-block;width:15px;height:15px;border:2px solid rgba(255,255,255,.25);
+  border-top-color:var(--gold);border-radius:50%;animation:mxspin .7s linear infinite;vertical-align:-2px}
+@keyframes mxspin{to{transform:rotate(360deg)}}

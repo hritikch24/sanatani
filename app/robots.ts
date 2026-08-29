@@ -14,11 +14,14 @@ const AI_CRAWLERS = [
   'cohere-ai', 'YouBot', 'Diffbot', 'omgili',
 ];
 
+/** Private surfaces: the API and the key-gated metrics dashboard. */
+const DISALLOW = ['/api/', '/metrics'];
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: '*', allow: '/', disallow: ['/api/'] },
-      ...AI_CRAWLERS.map(ua => ({ userAgent: ua, allow: '/', disallow: ['/api/'] })),
+      { userAgent: '*', allow: '/', disallow: DISALLOW },
+      ...AI_CRAWLERS.map(ua => ({ userAgent: ua, allow: '/', disallow: DISALLOW })),
     ],
     sitemap: 'https://sanatanparivar.in/sitemap.xml',
     host: 'https://sanatanparivar.in',

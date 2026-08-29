@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Tiro_Devanagari_Hindi, Inter } from 'next/font/google';
+import { Suspense } from 'react';
+import Track from './components/Track';
 import './globals.css';
 
 
@@ -126,7 +128,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavJsonLd) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Suspense fallback={null}><Track /></Suspense>
+      </body>
     </html>
   );
 }
