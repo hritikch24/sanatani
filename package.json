@@ -5,14 +5,20 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "typecheck": "tsc --noEmit",
     "start": "next start",
     "images": "node scripts/build-images.mjs"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.9.4",
-    "next": "^14.2.35",
+    "astronomy-engine": "2.1.19",
+    "next": "15.5.27",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "overrides": {
+    "postcss": "8.5.28",
+    "nanoid": "3.3.19"
   },
   "devDependencies": {
     "@types/node": "^20",

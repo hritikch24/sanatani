@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: 'दैनिक श्लोक — भगवद् गीता, उपनिषद् एवं वेद',
     description: 'प्रतिदिन गीता, उपनिषद् और वेदों से दिव्य श्लोक हिंदी अर्थ सहित पढ़ें।',
     url: 'https://sanatanparivar.in/shloka',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'सनातन परिवार — हिंदी अर्थ सहित श्लोक संग्रह' }],
   },
 };
 

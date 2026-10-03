@@ -4,6 +4,8 @@ export const SITE = 'https://sanatanparivar.in';
 
 export const NAV = [
   { href: '/', label: 'मुख्य पृष्ठ' },
+  { href: '/panchang', label: 'आज का पंचांग' },
+  { href: '/hindu-calendar', label: 'हिंदू कैलेंडर' },
   { href: '/upasthiti', label: 'सनातन उपस्थिति' },
   { href: '/itihas', label: 'सनातन का इतिहास' },
   { href: '/gurukul', label: 'गुरुकुल परम्परा' },
@@ -24,7 +26,7 @@ export function SiteNav({ active }: { active?: string }) {
     <nav className="site-nav" aria-label="मुख्य नेविगेशन">
       <div className="site-nav-inner">
         {NAV.map(n => (
-          <Link key={n.href} href={n.href} className={`site-nav-link${active === n.href ? ' active' : ''}`}>
+          <Link key={n.href} href={n.href} aria-current={active === n.href ? 'page' : undefined} className={`site-nav-link${active === n.href ? ' active' : ''}`}>
             {n.label}
           </Link>
         ))}
@@ -103,7 +105,7 @@ export function SiteFooter() {
 }
 
 export function Ld({ data }: { data: object | object[] }) {
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />;
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, '\\u003c') }} />;
 }
 
 export function articleLd(o: {

@@ -21,9 +21,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid email format' }, { status: 400 });
   }
 
-  const sql = neon(process.env.DATABASE_URL!);
-
   try {
+    const sql = neon(process.env.DATABASE_URL!);
     const [rl] = await sql`
       SELECT COUNT(*) AS c FROM members
       WHERE ip = ${ip} AND registered_at > NOW() - INTERVAL '5 minutes'

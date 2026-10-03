@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'सनातन धर्म के सोलह संस्कार क्रम से — गर्भाधान, नामकरण, अन्नप्राशन, मुंडन, उपनयन, विद्यारंभ, विवाह और अंत्येष्टि तक। हर संस्कार का अर्थ, समय और महत्व सरल हिंदी में।',
   keywords: ['सोलह संस्कार', '16 संस्कार', 'षोडश संस्कार', 'नामकरण संस्कार', 'उपनयन संस्कार', 'अन्नप्राशन', 'मुंडन संस्कार', 'विवाह संस्कार', 'अंत्येष्टि', 'sixteen sanskar', 'hindu samskara', 'चार आश्रम', 'चार पुरुषार्थ'],
   alternates: { canonical: '/sanskar' },
-  openGraph: { title: 'सोलह संस्कार — जन्म से मृत्यु तक', description: 'सनातन धर्म के सोलह संस्कारों का क्रम, अर्थ एवं महत्व।', url: 'https://sanatanparivar.in/sanskar', type: 'article' },
+  openGraph: { title: 'सोलह संस्कार — जन्म से मृत्यु तक', description: 'सनातन धर्म के सोलह संस्कारों का क्रम, अर्थ एवं महत्व।', url: 'https://sanatanparivar.in/sanskar', type: 'article', images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'सनातन परिवार — सोलह संस्कार' }] },
 };
 
 const CRUMBS = [{ href: '/', label: 'मुख्य पृष्ठ' }, { href: '/sanskar', label: '16 संस्कार' }];

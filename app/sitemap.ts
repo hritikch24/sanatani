@@ -2,16 +2,17 @@ import type { MetadataRoute } from 'next';
 
 const SITE = 'https://sanatanparivar.in';
 
-/**
- * Generated at build time so lastmod never goes stale by hand.
- * Keep priorities honest: the pages people actually search for rank highest.
- */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
   const pages: { path: string; priority: number; freq: MetadataRoute.Sitemap[number]['changeFrequency'] }[] = [
     { path: '/', priority: 1.0, freq: 'daily' },
+    { path: '/panchang', priority: 0.9, freq: 'daily' },
+    { path: '/hindu-calendar', priority: 0.9, freq: 'daily' },
+    { path: '/tithi', priority: 0.8, freq: 'monthly' },
+    { path: '/ekadashi', priority: 0.8, freq: 'monthly' },
+    { path: '/purnima', priority: 0.8, freq: 'monthly' },
+    { path: '/amavasya', priority: 0.8, freq: 'monthly' },
     { path: '/upasthiti', priority: 0.9, freq: 'hourly' },
-    { path: '/shloka', priority: 0.9, freq: 'daily' },
+    { path: '/shloka', priority: 0.9, freq: 'monthly' },
     { path: '/chalisa', priority: 0.9, freq: 'monthly' },
     { path: '/gurukul', priority: 0.85, freq: 'monthly' },
     { path: '/itihas', priority: 0.85, freq: 'monthly' },
@@ -24,7 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
   return pages.map(p => ({
     url: `${SITE}${p.path}`,
-    lastModified: now,
     changeFrequency: p.freq,
     priority: p.priority,
   }));

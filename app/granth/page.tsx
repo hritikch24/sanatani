@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'सनातन धर्म के सभी प्रमुख ग्रंथों का परिचय — चार वेद, 108 उपनिषद्, 18 पुराण, रामायण, महाभारत, भगवद् गीता, षड्दर्शन, स्मृति एवं सूत्र ग्रंथ। श्रुति और स्मृति का अंतर सरल हिंदी में।',
   keywords: ['सनातन धर्म के ग्रंथ', 'चार वेद', 'उपनिषद', '18 पुराण', 'रामायण महाभारत', 'भगवद गीता', 'श्रुति स्मृति', 'षड्दर्शन', 'वेदांग', 'hindu scriptures', 'four vedas', 'upanishads', 'puranas list', 'वेद कितने हैं', 'गीता में कितने श्लोक हैं'],
   alternates: { canonical: '/granth' },
-  openGraph: { title: 'सनातन धर्म के ग्रंथ — वेद, उपनिषद्, पुराण एवं गीता', description: 'सनातन के सभी प्रमुख ग्रंथों का सरल परिचय।', url: 'https://sanatanparivar.in/granth', type: 'article' },
+  openGraph: { title: 'सनातन धर्म के ग्रंथ — वेद, उपनिषद्, पुराण एवं गीता', description: 'सनातन के सभी प्रमुख ग्रंथों का सरल परिचय।', url: 'https://sanatanparivar.in/granth', type: 'article', images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'सनातन परिवार — वेद, उपनिषद्, पुराण एवं गीता' }] },
 };
 
 const CRUMBS = [{ href: '/', label: 'मुख्य पृष्ठ' }, { href: '/granth', label: 'ग्रंथ' }];

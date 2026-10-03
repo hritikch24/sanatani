@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Tiro_Devanagari_Hindi, Inter } from 'next/font/google';
 import { Suspense } from 'react';
 import Track from './components/Track';
+import { Ld, NAV, SITE } from './components/SiteChrome';
 import './globals.css';
 
 
@@ -29,9 +30,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'सनातन परिवार — हिंदू समुदाय की डिजिटल पहचान | Sanatan Parivar',
-  description: 'सनातन परिवार — भारत का सबसे बड़ा सनातनी डिजिटल समुदाय। निःशुल्क सदस्यता लें, सनातनी पहचान पाएं, दैनिक श्लोक पढ़ें। Join India\'s largest Sanatani digital community. Free membership, daily shlokas, digital ID card.',
-  keywords: ['सनातन परिवार', 'सनातन धर्म', 'हिंदू समुदाय', 'sanatan parivar', 'hindu community', 'sanatan dharma', 'digital hindu identity', 'daily shloka', 'bhagavad gita', 'सनातनी पहचान', 'हिंदू पहचान पत्र', 'सनातन परिवार रजिस्ट्रेशन', 'गीता श्लोक', 'आज का श्लोक', 'हिंदू धर्म', 'भगवद गीता', 'हिंदू संस्कृति', 'वेद उपनिषद', 'सनातन संस्कृति', 'हिंदू एकता', 'धर्म रक्षा', 'sanatan dharma registration', 'hindu identity card', 'free hindu membership', 'bhagavad gita shloka hindi', 'daily mantra hindi', 'hindu organization india', 'गुरुकुल', 'गुरुकुल परम्परा', 'सनातन धर्म का इतिहास', 'हनुमान चालीसा', '12 ज्योतिर्लिंग', 'सोलह संस्कार', 'हिंदू त्योहार', 'चार वेद', 'उपनिषद', 'तक्षशिला नालंदा', 'हिंदू तीर्थ', 'sanatan dharma history', 'gurukul system', 'hanuman chalisa', 'hindu festivals', 'jyotirlinga list'],
+  title: 'आज का पंचांग, तिथि और हिंदू कैलेंडर | सनातन परिवार',
+  description: 'दैनिक पंचांग में तिथि, पक्ष और सूर्योदय-सूर्यास्त देखें। हिंदू कैलेंडर, हिंदी अर्थ सहित श्लोक और हिंदू संस्कृति, ग्रंथ व परम्पराओं का परिचय पाएं।',
   manifest: '/manifest.json',
   authors: [{ name: 'सनातन परिवार', url: 'https://sanatanparivar.in' }],
   creator: 'सनातन परिवार',
@@ -39,11 +39,9 @@ export const metadata: Metadata = {
   category: 'religion',
   formatDetection: { telephone: false, address: false, email: false },
   metadataBase: new URL('https://sanatanparivar.in'),
-  alternates: { canonical: '/', languages: { 'hi-IN': '/', 'x-default': '/' } },
+  alternates: { canonical: './' },
   openGraph: {
-    title: 'सनातन परिवार — हिंदू समुदाय की डिजिटल पहचान',
-    description: 'भारत का सबसे बड़ा सनातनी डिजिटल समुदाय। निःशुल्क सदस्यता लें, सनातनी पहचान पाएं।',
-    url: 'https://sanatanparivar.in',
+    url: './',
     siteName: 'सनातन परिवार | Sanatan Parivar',
     locale: 'hi_IN',
     type: 'website',
@@ -51,9 +49,6 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'सनातन परिवार — हिंदू समुदाय की डिजिटल पहचान',
-    description: 'भारत का सबसे बड़ा सनातनी डिजिटल समुदाय। निःशुल्क सदस्यता।',
-    images: ['/og-image.jpg'],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 } },
   appleWebApp: { capable: true, statusBarStyle: 'black-translucent', title: 'सनातन परिवार' },
@@ -70,8 +65,7 @@ const jsonLd = {
   alternateName: 'Sanatan Parivar',
   url: 'https://sanatanparivar.in',
   logo: 'https://sanatanparivar.in/icon.svg',
-  description: 'भारत का सबसे बड़ा सनातनी डिजिटल समुदाय — निःशुल्क सदस्यता, दैनिक श्लोक, सनातनी पहचान',
-  foundingDate: '2026',
+  description: 'दैनिक तिथि और पक्ष, हिंदू कैलेंडर, हिंदी अर्थ सहित श्लोक और हिंदू संस्कृति का परिचय।',
   sameAs: [],
   contactPoint: { '@type': 'ContactPoint', email: 'contact@sanatanparivar.in', contactType: 'customer service', availableLanguage: ['Hindi', 'English'] },
 };
@@ -89,31 +83,9 @@ const siteNavJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'सनातन परिवार — विषय सूची',
-  itemListElement: [
-    ['सनातन उपस्थिति', '/upasthiti'],
-    ['सनातन धर्म का इतिहास', '/itihas'],
-    ['गुरुकुल परम्परा', '/gurukul'],
-    ['सनातन ग्रंथ', '/granth'],
-    ['हनुमान चालीसा', '/chalisa'],
-    ['तीर्थ एवं ज्योतिर्लिंग', '/mandir'],
-    ['सोलह संस्कार', '/sanskar'],
-    ['पर्व एवं त्योहार', '/parv'],
-    ['दैनिक श्लोक', '/shloka'],
-  ].map(([name, path], i) => ({
-    '@type': 'ListItem', position: i + 1, name, url: `https://sanatanparivar.in${path}`,
+  itemListElement: NAV.map(({ label, href }, index) => ({
+    '@type': 'ListItem', position: index + 1, name: label, url: `${SITE}${href}`,
   })),
-};
-
-const faqJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
-    { '@type': 'Question', name: 'सनातन परिवार क्या है?', acceptedAnswer: { '@type': 'Answer', text: 'सनातन परिवार भारत का सबसे बड़ा सनातनी डिजिटल समुदाय है। यहाँ आप निःशुल्क सदस्यता लेकर अपनी सनातनी पहचान पा सकते हैं, प्रतिदिन गीता के श्लोक पढ़ सकते हैं, और लाखों सनातनियों से जुड़ सकते हैं।' } },
-    { '@type': 'Question', name: 'सनातन परिवार में कैसे जुड़ें?', acceptedAnswer: { '@type': 'Answer', text: 'SanatanParivar.in पर जाएं, "अभी जुड़ें" बटन दबाएं, अपना नाम भरें और 30 सेकंड में निःशुल्क सदस्यता पाएं। आपको तुरंत डिजिटल पहचान पत्र मिलेगा।' } },
-    { '@type': 'Question', name: 'क्या सनातन परिवार की सदस्यता निःशुल्क है?', acceptedAnswer: { '@type': 'Answer', text: 'हाँ, सनातन परिवार की सदस्यता पूर्णतः निःशुल्क है और सदा रहेगी। कोई छिपा शुल्क नहीं है।' } },
-    { '@type': 'Question', name: 'सनातन परिवार का पहचान पत्र क्या है?', acceptedAnswer: { '@type': 'Answer', text: 'यह एक डिजिटल सामुदायिक पहचान पत्र है जो आपके सनातन परिवार की सदस्यता को दर्शाता है। इसमें आपका नाम, सदस्य संख्या और तिथि होती है। आप इसे डाउनलोड और WhatsApp पर शेयर कर सकते हैं। यह शासकीय दस्तावेज़ नहीं है।' } },
-    { '@type': 'Question', name: 'आज का श्लोक कहाँ पढ़ें?', acceptedAnswer: { '@type': 'Answer', text: 'SanatanParivar.in पर प्रतिदिन भगवद् गीता, उपनिषद् और वेदों से एक नया श्लोक अर्थ सहित प्रकाशित होता है। आप इसे WhatsApp पर भी शेयर कर सकते हैं।' } },
-  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -123,10 +95,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavJsonLd) }} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+        <Ld data={[jsonLd, websiteJsonLd, siteNavJsonLd]} />
       </head>
       <body>
         {children}

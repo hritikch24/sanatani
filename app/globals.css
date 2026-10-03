@@ -6,6 +6,17 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 html{scroll-behavior:smooth}
+:focus-visible{outline:3px solid var(--sf);outline-offset:4px}
+.art-wrap.calendar-page{max-width:1120px}
+.art-eyebrow{font-family:var(--deva);color:var(--muted);font-size:.85rem;letter-spacing:.05em;margin-bottom:.75rem}
+.calendar-method{font-family:var(--deva);line-height:2;max-width:760px;margin:2rem auto;color:var(--muted)}
+.calendar-method p{margin-bottom:1rem}
+.calendar-method a{color:var(--mr);text-underline-offset:3px}
+.calendar-method ul{padding-left:1.5rem;margin:1rem 0}
+.calendar-method summary{cursor:pointer;color:var(--mr)}
+.hero-calendar{display:inline-block;text-decoration:none}
+.hero-membership{position:relative;z-index:1;color:var(--cr);background:transparent;border:1px solid rgba(255,248,220,.55);border-radius:100px;padding:.75rem 1.25rem;cursor:pointer;font-family:var(--deva);font-size:1rem;margin-top:1rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 body{font-family:var(--en);background:var(--cr);color:var(--text);min-height:100vh;overflow-x:hidden;
   background-image:radial-gradient(circle at 25px 25px,rgba(218,165,32,.08) 2px,transparent 2px),
   radial-gradient(circle at 75px 75px,rgba(218,165,32,.08) 2px,transparent 2px);background-size:100px 100px}

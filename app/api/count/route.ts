@@ -6,10 +6,10 @@ export async function GET() {
     const sql = neon(process.env.DATABASE_URL!);
     const [{ count }] = await sql`SELECT COUNT(*)::int AS count FROM members`;
     return NextResponse.json(
-      { count: 1500 + Number(count) },
+      { count: Number(count) },
       { headers: { 'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=60' } },
     );
   } catch {
-    return NextResponse.json({ count: 1500 }, { status: 200 });
+    return NextResponse.json({ error: 'Member count unavailable' }, { status: 503 });
   }
 }

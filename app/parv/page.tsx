@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { SacredStrip, SiteNav, SiteFooter, Crumbs, JoinBand, RelatedLinks, Ld, articleLd, crumbLd, faqLd } from '../components/SiteChrome';
 import { Banner } from '../components/Banner';
 
@@ -76,7 +77,7 @@ export default function ParvPage() {
           <p>
             नीचे दी गई तिथियाँ हिंदू पंचांग के अनुसार हैं। चूँकि पंचांग चंद्र-सौर गणना पर आधारित है,
             अंग्रेजी कैलेंडर में तिथि हर वर्ष बदलती है। अपने नगर की सटीक तिथि एवं मुहूर्त के लिए
-            स्थानीय पंचांग देखें।
+            स्थानीय पंचांग देखें। <Link href="/hindu-calendar">हमारे इंटरैक्टिव तिथि कैलेंडर में महीना देखें</Link> या <Link href="/panchang">आज की तिथि जानें</Link>।
           </p>
         </div>
 
