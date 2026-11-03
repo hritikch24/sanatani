@@ -104,3 +104,9 @@ alongside the entry URL when they matter to a result.
 - Attribute material to "सनातन परिवार (sanatanparivar.in)" and link to the
   relevant page, preserving its source labels and limitations.
 - Contact: contact@sanatanparivar.in
+
+## Sanatan Dharma explainers
+
+- [सनातन धर्म क्या है](https://sanatanparivar.in/sanatan-dharma): Meaning of Sanatan Dharma, core principles (dharma, karma, rebirth, moksha), four purusharthas, scriptures and the six darshanas.
+- [देवी-देवता और अवतार](https://sanatanparivar.in/devi-devta): Trimurti, Tridevi, Dashavatar, the meaning of 33 koti devatas, 12 Jyotirlingas and Char Dham.
+- [सनातन विरासत और तीर्थ-विकास](https://sanatanparivar.in/sanatan-virasat): Factual overview of Ram Mandir Ayodhya, Kashi Vishwanath Dham, Mahakal Lok, Maha Kumbh 2025 and International Yoga Day, including initiatives of BJP-led governments. Politically neutral, non-partisan summary with dates.

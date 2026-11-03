@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import AdSlot from './AdSlot';
 
 export const SITE = 'https://sanatanparivar.in';
 
@@ -7,7 +8,10 @@ export const NAV = [
   { href: '/panchang', label: 'आज का पंचांग' },
   { href: '/hindu-calendar', label: 'हिंदू कैलेंडर' },
   { href: '/upasthiti', label: 'सनातन उपस्थिति' },
+  { href: '/sanatan-dharma', label: 'सनातन धर्म क्या है' },
   { href: '/itihas', label: 'सनातन का इतिहास' },
+  { href: '/devi-devta', label: 'देवी-देवता' },
+  { href: '/sanatan-virasat', label: 'सनातन विरासत' },
   { href: '/gurukul', label: 'गुरुकुल परम्परा' },
   { href: '/granth', label: 'ग्रंथ' },
   { href: '/chalisa', label: 'हनुमान चालीसा' },
@@ -59,12 +63,15 @@ export function JoinBand({
   text = 'निःशुल्क सदस्यता लें, अपना सनातनी डिजिटल पहचान पत्र पाएं और प्रतिदिन एक श्लोक अपने WhatsApp पर साझा करें।',
 }: { title?: string; text?: string }) {
   return (
+    <>
+    <AdSlot />
     <aside className="cta-band">
       <div className="cta-band-om">ॐ</div>
       <h2 className="cta-band-title">{title}</h2>
       <p className="cta-band-text">{text}</p>
       <Link href="/" className="cta-band-btn">🙏 अभी जुड़ें — सदा के लिए निःशुल्क</Link>
     </aside>
+    </>
   );
 }
 

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Tiro_Devanagari_Hindi, Inter } from 'next/font/google';
 import { Suspense } from 'react';
+import Script from 'next/script';
 import Track from './components/Track';
 import { Ld, NAV, SITE } from './components/SiteChrome';
 import './globals.css';
@@ -31,12 +32,13 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'आज का पंचांग, तिथि और हिंदू कैलेंडर | सनातन परिवार',
-  description: 'दैनिक पंचांग में तिथि, पक्ष और सूर्योदय-सूर्यास्त देखें। हिंदू कैलेंडर, हिंदी अर्थ सहित श्लोक और हिंदू संस्कृति, ग्रंथ व परम्पराओं का परिचय पाएं।',
+  description: 'दैनिक पंचांग में तिथि, पक्ष और सूर्योदय-सूर्यास्त देखें। सनातन धर्म क्या है, देवी-देवता, तीर्थ व विरासत, हिंदू कैलेंडर और हिंदी अर्थ सहित श्लोक।',
   manifest: '/manifest.json',
   authors: [{ name: 'सनातन परिवार', url: 'https://sanatanparivar.in' }],
   creator: 'सनातन परिवार',
   publisher: 'सनातन परिवार',
   category: 'religion',
+  keywords: ['सनातन धर्म', 'आज का पंचांग', 'हिंदू कैलेंडर', 'सनातन धर्म क्या है', 'हिंदी श्लोक', 'तीर्थ', 'sanatan dharma', 'hindu panchang today'],
   formatDetection: { telephone: false, address: false, email: false },
   metadataBase: new URL('https://sanatanparivar.in'),
   alternates: { canonical: './' },
@@ -100,6 +102,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {children}
         <Suspense fallback={null}><Track /></Suspense>
+        {process.env.NEXT_PUBLIC_ADSENSE_CLIENT && (
+          <Script id="adsense" async strategy="afterInteractive" crossOrigin="anonymous"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_ADSENSE_CLIENT}`} />
+        )}
       </body>
     </html>
   );

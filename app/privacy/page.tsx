@@ -42,10 +42,9 @@ export default function PrivacyPage() {
           <li>एक अस्थायी सत्र पहचान, जो टैब बंद होते ही समाप्त हो जाती है / A temporary session id that is discarded when the tab closes</li>
         </ul>
         <p style={{ marginTop: '.5rem', fontSize: '.85rem', opacity: .85 }}>
-          यह हमारा अपना आँकड़ा-संग्रह है — कोई तीसरे पक्ष का विश्लेषण उपकरण, विज्ञापन नेटवर्क या
-          ट्रैकिंग कुकी उपयोग नहीं की जाती। इसका उद्देश्य केवल यह समझना है कि कौन सी सामग्री उपयोगी है।<br />
-          This is first-party only — no third-party analytics, ad networks or tracking cookies. It exists
-          solely to understand which content is useful.
+          यह हमारा अपना आँकड़ा-संग्रह है — हमारे अपने विश्लेषण में कोई तीसरे पक्ष का ट्रैकर उपयोग नहीं होता। इसका उद्देश्य केवल यह समझना है कि कौन सी सामग्री उपयोगी है।<br />
+          Our own analytics are first-party only. Advertising (see the Advertising section below) is separate.
+          It exists solely to understand which content is useful.
         </p>
         <p style={{ marginTop: '.5rem', fontSize: '.85rem', opacity: .85 }}>
           हैश एकतरफ़ा है — उससे आपका वास्तविक IP पुनः प्राप्त नहीं किया जा सकता। इसका उद्देश्य केवल यह है
@@ -55,10 +54,16 @@ export default function PrivacyPage() {
       </div>
 
       <div style={S}>
+        <h3 style={H}>विज्ञापन / Advertising</h3>
+        <p>इस साइट पर Google AdSense जैसे तीसरे पक्ष के विज्ञापन दिखाए जा सकते हैं। Google सहित तीसरे पक्ष के विक्रेता कुकी का उपयोग करके आपकी इस या अन्य साइटों की पिछली यात्राओं के आधार पर विज्ञापन दिखा सकते हैं। आप <a href="https://adssettings.google.com" rel="noopener noreferrer">Google विज्ञापन सेटिंग</a> में वैयक्तिकृत विज्ञापन बंद कर सकते हैं।</p>
+        <p>Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this or other websites. You may opt out of personalised advertising at <a href="https://adssettings.google.com" rel="noopener noreferrer">Google Ads Settings</a>. See also <a href="https://policies.google.com/technologies/ads" rel="noopener noreferrer">how Google uses data</a>.</p>
+      </div>
+
+      <div style={S}>
         <h3 style={H}>2. उपयोग का उद्देश्य / Purpose of Use</h3>
         <p>सामुदायिक सदस्यता निर्देशिका, डिजिटल पहचान पत्र, तथा देश अनुसार सामुदायिक उपस्थिति के आँकड़े दिखाना।</p>
         <p>Community membership directory, digital ID cards, and aggregate country-wise presence statistics.</p>
-        <p style={{ marginTop: '.5rem' }}>हम विज्ञापन या ट्रैकिंग कुकी का उपयोग नहीं करते। / We use no advertising or tracking cookies.</p>
+        <p style={{ marginTop: '.5rem' }}>हमारे अपने आँकड़े-संग्रह में कोई ट्रैकिंग कुकी नहीं है; विज्ञापन हेतु ऊपर देखें। / Our own analytics set no tracking cookies; see Advertising above.</p>
       </div>
 
       <div style={S}>

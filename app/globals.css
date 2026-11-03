@@ -585,3 +585,7 @@ footer{
   border-radius:14px;
 }
 .banner--narrow{max-width:420px;margin-left:auto;margin-right:auto}
+
+/* AdSense placeholder: space reserved so ads never shift layout */
+.ad-slot{margin:1.75rem auto;max-width:728px;text-align:center;overflow:hidden}
+.ad-label{display:block;font-size:.65rem;letter-spacing:.12em;color:var(--muted);opacity:.7;margin-bottom:.25rem}
