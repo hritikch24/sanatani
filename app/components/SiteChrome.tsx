@@ -17,6 +17,7 @@ export const NAV = [
   { href: '/chalisa', label: 'हनुमान चालीसा' },
   { href: '/mandir', label: 'तीर्थ एवं मंदिर' },
   { href: '/sanskar', label: '16 संस्कार' },
+  { href: '/diwali', label: 'दीपावली 2026' },
   { href: '/parv', label: 'पर्व एवं त्योहार' },
   { href: '/shloka', label: 'दैनिक श्लोक' },
 ];

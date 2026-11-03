@@ -10,14 +10,14 @@ export type Sec = {
 };
 export type ArticleData = {
   path: string; navLabel: string; h1: string; lead: string; headline: string; desc: string; section: string;
-  modified: string; sections: Sec[]; faq: { q: string; a: string }[]; note?: string;
+  modified: string; extraLd?: object[]; sections: Sec[]; faq: { q: string; a: string }[]; note?: string;
 };
 
 export function Article({ d }: { d: ArticleData }) {
   const crumbs = [{ href: '/', label: 'मुख्य पृष्ठ' }, { href: d.path, label: d.navLabel }];
   return (
     <>
-      <Ld data={[articleLd({ slug: d.path, headline: d.headline, description: d.desc, section: d.section, modified: d.modified }), crumbLd(crumbs), faqLd(d.faq)]} />
+      <Ld data={[articleLd({ slug: d.path, headline: d.headline, description: d.desc, section: d.section, modified: d.modified }), crumbLd(crumbs), faqLd(d.faq), ...(d.extraLd ?? [])]} />
       <SacredStrip />
       <SiteNav active={d.path} />
       <main className="art-wrap">

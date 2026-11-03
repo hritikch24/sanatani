@@ -15,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/shloka', priority: 0.9, freq: 'monthly' },
     { path: '/chalisa', priority: 0.9, freq: 'monthly' },
     { path: '/gurukul', priority: 0.85, freq: 'monthly' },
+    { path: '/diwali', priority: 0.95, freq: 'daily' },
     { path: '/sanatan-dharma', priority: 0.95, freq: 'monthly' },
     { path: '/sanatan-virasat', priority: 0.9, freq: 'monthly' },
     { path: '/devi-devta', priority: 0.85, freq: 'monthly' },

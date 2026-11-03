@@ -110,3 +110,7 @@ alongside the entry URL when they matter to a result.
 - [सनातन धर्म क्या है](https://sanatanparivar.in/sanatan-dharma): Meaning of Sanatan Dharma, core principles (dharma, karma, rebirth, moksha), four purusharthas, scriptures and the six darshanas.
 - [देवी-देवता और अवतार](https://sanatanparivar.in/devi-devta): Trimurti, Tridevi, Dashavatar, the meaning of 33 koti devatas, 12 Jyotirlingas and Char Dham.
 - [सनातन विरासत और तीर्थ-विकास](https://sanatanparivar.in/sanatan-virasat): Factual overview of Ram Mandir Ayodhya, Kashi Vishwanath Dham, Mahakal Lok, Maha Kumbh 2025 and International Yoga Day, including initiatives of BJP-led governments. Politically neutral, non-partisan summary with dates.
+
+## Diwali
+
+- [दीपावली 2026 / Diwali 2026](https://sanatanparivar.in/diwali): Dates (Dhanteras 6 Nov, Lakshmi Puja Sunday 8 Nov 2026), five-day festival guide, puja vidhi, legends, regional traditions, safety. Dates cross-checked against published panchangs and an independent new-moon calculation; known panchang disagreements for Naraka Chaturdashi, Govardhan Puja and Bhai Dooj are stated openly.
