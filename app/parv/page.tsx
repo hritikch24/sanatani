@@ -88,7 +88,7 @@ export default function ParvPage() {
               <div className="tl-item" key={p.n}>
                 <div className="tl-era">{p.t}</div>
                 <div className="tl-name">{p.n}</div>
-                <div className="tl-desc">{p.d}</div>
+                <div className="tl-desc">{p.d}{p.n === 'दीपावली' && <> <Link href="/diwali">दीपावली 2026: तिथि, पूजा विधि और पूरी जानकारी →</Link></>}</div>
               </div>
             ))}
           </div>

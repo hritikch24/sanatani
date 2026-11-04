@@ -94,6 +94,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="hi" dir="ltr" className={`${deva.variable} ${inter.variable}`}>
       <head>
+        <link rel="alternate" type="application/rss+xml" title="सनातन परिवार" href="/feed.xml" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <link rel="icon" href="/icon-192.png" sizes="192x192" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

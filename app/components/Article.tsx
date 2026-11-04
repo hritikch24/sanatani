@@ -10,14 +10,14 @@ export type Sec = {
 };
 export type ArticleData = {
   path: string; navLabel: string; h1: string; lead: string; headline: string; desc: string; section: string;
-  modified: string; extraLd?: object[]; sections: Sec[]; faq: { q: string; a: string }[]; note?: string;
+  modified: string; extraLd?: object[]; tldr?: { hi: string; en: string }; sections: Sec[]; faq: { q: string; a: string }[]; note?: string;
 };
 
 export function Article({ d }: { d: ArticleData }) {
   const crumbs = [{ href: '/', label: 'मुख्य पृष्ठ' }, { href: d.path, label: d.navLabel }];
   return (
     <>
-      <Ld data={[articleLd({ slug: d.path, headline: d.headline, description: d.desc, section: d.section, modified: d.modified }), crumbLd(crumbs), faqLd(d.faq), ...(d.extraLd ?? [])]} />
+      <Ld data={[{ ...articleLd({ slug: d.path, headline: d.headline, description: d.desc, section: d.section, modified: d.modified }), speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.art-h1', '.tldr'] }, ...(d.tldr ? { abstract: d.tldr.en } : {}) }, crumbLd(crumbs), faqLd(d.faq), ...(d.extraLd ?? [])]} />
       <SacredStrip />
       <SiteNav active={d.path} />
       <main className="art-wrap">
@@ -27,6 +27,13 @@ export function Article({ d }: { d: ArticleData }) {
           <h1 className="art-h1">{d.h1}</h1>
           <p className="art-lead">{d.lead}</p>
         </header>
+        {d.tldr && (
+          <aside className="art-card tldr" aria-label="संक्षेप में" style={{ marginBottom: '1.5rem' }}>
+            <h2 className="art-h2" style={{ fontSize: '1.05rem', marginTop: 0 }}>संक्षेप में / In short</h2>
+            <p className="art-p">{d.tldr.hi}</p>
+            <p className="art-p" lang="en">{d.tldr.en}</p>
+          </aside>
+        )}
         <nav className="art-card" aria-label="इस पृष्ठ की विषय-सूची" style={{ marginBottom: '1.5rem' }}>
           <h2 className="art-h2" style={{ fontSize: '1.05rem', marginTop: 0 }}>विषय-सूची</h2>
           <ol className="art-ul">{d.sections.map(s => <li key={s.id}><a href={`#${s.id}`}>{s.title}</a></li>)}</ol>
